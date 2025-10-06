@@ -25,9 +25,12 @@ func (srv *StreamServer) StreamData() {
 		logger.Info("Failed to connect to Binance Futures:", "Error", err)
 		return
 	}
-	defer conn.Close()
-
-	transactionId := 0
+	defer func(conn *websocket.Conn) {
+		err := conn.Close()
+		if err != nil {
+			logger.Info("Failed to close websocket:", "Error", err)
+		}
+	}(conn)
 
 	for {
 		_, message, err := conn.ReadMessage()
@@ -35,8 +38,10 @@ func (srv *StreamServer) StreamData() {
 			logger.Error("Error reading message", "error", err)
 			break
 		}
-
-		transactionId++
-		logger.Debug("Message received", "transactionId", transactionId, "message", string(message))
+		logger.Debug("Message received", "message", string(message))
 	}
+}
+
+func (srv *StreamServer) ConnectServer() error {
+	return srv.MongoClient.Connect()
 }

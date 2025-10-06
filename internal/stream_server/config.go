@@ -1,6 +1,7 @@
 package stream_server
 
 import (
+	"app/internal/mongo_client"
 	"log"
 	"log/slog"
 	"os"
@@ -13,6 +14,7 @@ import (
 type StreamServer struct {
 	StreamServerConfig StreamServerConfig
 	StreamServerLogger *slog.Logger
+	MongoClient        *mongo_client.MongoClient
 }
 
 type StreamServerConfig struct {
@@ -27,9 +29,12 @@ func NewStreamServer() *StreamServer {
 	}
 	logger := InitializeStreamServerLogger(config)
 
+	mongoClient := mongo_client.NewMongoClient()
+
 	return &StreamServer{
 		StreamServerConfig: *config,
 		StreamServerLogger: logger,
+		MongoClient:        mongoClient,
 	}
 }
 
@@ -54,9 +59,7 @@ func InitializeStreamServerLogger(config *StreamServerConfig) *slog.Logger {
 }
 
 func InitializeStreamServerConfig() (*StreamServerConfig, error) {
-	if err := godotenv.Load(); err != nil {
-		return nil, err
-	}
+	_ = godotenv.Load()
 
 	viper.AutomaticEnv()
 

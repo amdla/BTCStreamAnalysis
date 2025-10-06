@@ -61,9 +61,7 @@ func InitializeMongoLogger(config *MongoConfig) *slog.Logger {
 }
 
 func InitializeMongoConfig() (*MongoConfig, error) {
-	if err := godotenv.Load(); err != nil {
-		return nil, err
-	}
+	_ = godotenv.Load()
 
 	viper.AutomaticEnv()
 

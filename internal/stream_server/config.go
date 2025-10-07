@@ -1,6 +1,7 @@
 package stream_server
 
 import (
+	"app/internal/mongo_client"
 	"log"
 	"log/slog"
 	"os"
@@ -11,8 +12,9 @@ import (
 )
 
 type StreamServer struct {
-	Config StreamServerConfig
-	Logger slog.Logger
+	StreamServerConfig StreamServerConfig
+	StreamServerLogger *slog.Logger
+	MongoClient        *mongo_client.MongoClient
 }
 
 type StreamServerConfig struct {
@@ -21,16 +23,22 @@ type StreamServerConfig struct {
 }
 
 func NewStreamServer() *StreamServer {
-	config := InitializeStreamServerConfig()
-	logger := InitializeLogger(config)
+	config, err := InitializeStreamServerConfig()
+	if err != nil {
+		log.Fatalf("Failed to initialize Stream Server config: %v", err)
+	}
+	logger := InitializeStreamServerLogger(config)
+
+	mongoClient := mongo_client.NewMongoClient()
 
 	return &StreamServer{
-		Config: *config,
-		Logger: *logger,
+		StreamServerConfig: *config,
+		StreamServerLogger: logger,
+		MongoClient:        mongoClient,
 	}
 }
 
-func InitializeLogger(config *StreamServerConfig) *slog.Logger {
+func InitializeStreamServerLogger(config *StreamServerConfig) *slog.Logger {
 	var level slog.Level
 	if config.IsDebugMode {
 		level = slog.LevelDebug
@@ -50,15 +58,13 @@ func InitializeLogger(config *StreamServerConfig) *slog.Logger {
 	return logger
 }
 
-func InitializeStreamServerConfig() *StreamServerConfig {
-	if err := godotenv.Load(); err != nil {
-		log.Printf("No .env file found: %v", err)
-	}
+func InitializeStreamServerConfig() (*StreamServerConfig, error) {
+	_ = godotenv.Load()
 
 	viper.AutomaticEnv()
 
 	viper.SetDefault("SYMBOLS", []string{"BTCUSDT"})
-	viper.SetDefault("IS_DEBUG_MODE", true)
+	viper.SetDefault("STREAM_SERVER_DEBUG_MODE", false)
 
 	rawSymbols := viper.GetString("SYMBOLS")
 	symbols := strings.Split(rawSymbols, ",")
@@ -66,10 +72,10 @@ func InitializeStreamServerConfig() *StreamServerConfig {
 		symbols[i] = strings.TrimSpace(s)
 	}
 
-	isDebugMode := viper.GetBool("IS_DEBUG_MODE")
+	isDebugMode := viper.GetBool("STREAM_SERVER_DEBUG_MODE")
 
 	return &StreamServerConfig{
 		Symbols:     symbols,
 		IsDebugMode: isDebugMode,
-	}
+	}, nil
 }

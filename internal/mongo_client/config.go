@@ -81,7 +81,7 @@ func InitializeMongoConfig() (*MongoConfig, error) {
 		fmt.Printf("MongoDB configuration is incomplete. URI: '%s', Database: '%s', Username: '%s', Password set: %s\n", mongoURI, mongoDatabaseName, username, password)
 		return nil, fmt.Errorf("MongoDB configuration is incomplete, missing environment variables")
 	}
-	fmt.Printf("MongoDB configuration is complete. URI: '%s', Database: '%s', Username: '%s', Password set: %s\n", mongoURI, mongoDatabaseName, username, password)
+
 	return &MongoConfig{
 		URI:         mongoURI,
 		Database:    mongoDatabaseName,

@@ -1,7 +1,9 @@
 package stream_server
 
 import (
+	"app/internal/data_connector"
 	"app/internal/mongo_client"
+	"fmt"
 	"log"
 	"log/slog"
 	"os"
@@ -15,6 +17,7 @@ type StreamServer struct {
 	StreamServerConfig StreamServerConfig
 	StreamServerLogger *slog.Logger
 	MongoClient        *mongo_client.MongoClient
+	JetStreamClient    *data_connector.JetStreamClient
 }
 
 type StreamServerConfig struct {
@@ -30,11 +33,13 @@ func NewStreamServer() *StreamServer {
 	logger := InitializeStreamServerLogger(config)
 
 	mongoClient := mongo_client.NewMongoClient()
+	jsClient := data_connector.NewJetStreamClient()
 
 	return &StreamServer{
 		StreamServerConfig: *config,
 		StreamServerLogger: logger,
 		MongoClient:        mongoClient,
+		JetStreamClient:    jsClient,
 	}
 }
 
@@ -50,10 +55,7 @@ func InitializeStreamServerLogger(config *StreamServerConfig) *slog.Logger {
 		Level: level,
 	}))
 
-	slog.SetDefault(logger)
-
-	log.SetOutput(os.Stderr)
-	log.Printf("Stream Server starting - Debug: %v, Symbols: %v", config.IsDebugMode, config.Symbols)
+	logger.Debug("Stream Server starting - Debug: %v Symbols: %v", config.IsDebugMode, config.Symbols)
 
 	return logger
 }
@@ -63,7 +65,6 @@ func InitializeStreamServerConfig() (*StreamServerConfig, error) {
 
 	viper.AutomaticEnv()
 
-	viper.SetDefault("SYMBOLS", []string{"BTCUSDT"})
 	viper.SetDefault("STREAM_SERVER_DEBUG_MODE", false)
 
 	rawSymbols := viper.GetString("SYMBOLS")
@@ -73,6 +74,10 @@ func InitializeStreamServerConfig() (*StreamServerConfig, error) {
 	}
 
 	isDebugMode := viper.GetBool("STREAM_SERVER_DEBUG_MODE")
+
+	if len(symbols) == 0 || (len(symbols) == 1 && symbols[0] == "") {
+		return nil, fmt.Errorf("missing STREAM_SERVER_DEBUG_MODE env variable")
+	}
 
 	return &StreamServerConfig{
 		Symbols:     symbols,

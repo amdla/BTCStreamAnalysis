@@ -1,0 +1,16 @@
+services:
+  jetstream:
+    image: nats:2.10
+    command: ["-js", "--store_dir", "/data/jetstream"]
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    volumes:
+      - ./nats-data:/data
+    restart: unless-stopped
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

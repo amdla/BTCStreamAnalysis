@@ -41,7 +41,3 @@ func (srv *StreamServer) StreamData() {
 		logger.Debug("Message received", "message", string(message))
 	}
 }
-
-func (srv *StreamServer) ConnectServer() error {
-	return srv.MongoClient.Connect()
-}

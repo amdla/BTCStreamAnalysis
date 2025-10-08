@@ -15,9 +15,15 @@ func main() {
 		return
 	}
 
+	testMongoConnection(srv) //todo: remove after providing jetstream
+	srv.StreamData()
+}
+
+func testMongoConnection(srv *stream_server.StreamServer) { //todo: remove after providing jetstream
+	mongoClient := srv.MongoClient
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
-	collection := srv.MongoClient.Client.Database("test_db").Collection("test_connection")
+	collection := mongoClient.Client.Database("test_db").Collection("test_connection")
 
 	testDoc := bson.M{
 		"message":   "Hello MongoDB!",
@@ -30,6 +36,4 @@ func main() {
 		srv.StreamServerLogger.Error("Failed to insert test document", "error", err)
 		return
 	}
-
-	srv.StreamData()
 }

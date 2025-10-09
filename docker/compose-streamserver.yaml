@@ -1,0 +1,18 @@
+services:
+  stream-server:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: binance-stream-server
+    command: [ "/app/bin/stream-server" ]
+    restart: unless-stopped
+    env_file:
+      - ../.env
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    external: true

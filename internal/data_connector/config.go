@@ -5,7 +5,6 @@ import (
 	"log"
 	"log/slog"
 	"os"
-	"strings"
 
 	"github.com/joho/godotenv"
 	"github.com/nats-io/nats.go"
@@ -20,12 +19,11 @@ type JetStreamClient struct {
 }
 
 type JetStreamConfig struct {
-	StreamName     string
-	Subject        string
-	NatsURL        string
-	DurableName    string
-	OutputSubjects []string
-	IsDebugMode    bool
+	StreamName  string
+	Subject     string
+	NatsURL     string
+	DurableName string
+	IsDebugMode bool
 }
 
 func NewJetStreamClient() *JetStreamClient {
@@ -58,7 +56,6 @@ func InitializeJetStreamLogger(config *JetStreamConfig) *slog.Logger {
 	logger.Info("Initialized JetStream: ",
 		slog.Bool("DebugMode", config.IsDebugMode),
 		slog.String("StreamName", config.StreamName),
-		slog.String("Subject", config.Subject),
 		slog.String("NatsURL", config.NatsURL),
 	)
 
@@ -74,7 +71,6 @@ func InitializeJetStreamConfig() (*JetStreamConfig, error) {
 	viper.SetDefault("INPUT_SUBJECT", "input.events")
 	viper.SetDefault("STREAM_NAME", "EVENTS")
 	viper.SetDefault("DURABLE_CONSUMER", "connector-durable")
-	viper.SetDefault("OUTPUT_SUBJECTS", "consumer.alpha,consumer.beta")
 	viper.SetDefault("JETSTREAM_DEBUG_MODE", false)
 
 	natsURL := viper.GetString("NATS_URL")
@@ -82,26 +78,19 @@ func InitializeJetStreamConfig() (*JetStreamConfig, error) {
 	streamName := viper.GetString("STREAM_NAME")
 	durableName := viper.GetString("DURABLE_CONSUMER")
 
-	rawOutputSubjects := viper.GetString("OUTPUT_SUBJECTS")
-	outputSubjects := strings.Split(rawOutputSubjects, ",")
-	for i, s := range outputSubjects {
-		outputSubjects[i] = strings.TrimSpace(s)
-	}
-
 	isDebugMode := viper.GetBool("JETSTREAM_DEBUG_MODE")
 
-	if natsURL == "" || subject == "" || streamName == "" || durableName == "" || len(outputSubjects) == 0 {
+	if natsURL == "" || subject == "" || streamName == "" || durableName == "" {
 		fmt.Printf("Configuration incomplete: NATS_URL='%s', INPUT_SUBJECT='%s', STREAM_NAME='%s',"+
-			"DURABLE_CONSUMER='%s',OUTPUT_SUBJECTS='%v'\n", natsURL, subject, streamName, durableName, outputSubjects)
+			"DURABLE_CONSUMER='%s'\n", natsURL, subject, streamName, durableName)
 		return nil, fmt.Errorf("missing env variables")
 	}
 
 	return &JetStreamConfig{
-		NatsURL:        natsURL,
-		Subject:        subject,
-		StreamName:     streamName,
-		IsDebugMode:    isDebugMode,
-		DurableName:    durableName,
-		OutputSubjects: outputSubjects,
+		NatsURL:     natsURL,
+		Subject:     subject,
+		StreamName:  streamName,
+		IsDebugMode: isDebugMode,
+		DurableName: durableName,
 	}, nil
 }

@@ -35,7 +35,35 @@ func (c *Connector) Init() error {
 		}
 	}
 
-	// Set up consumer and subscription
+	js := c.jsClient.JetStreamContext
+
+	// 1️⃣ Ensure main input stream exists
+	mainStreamCfg := &nats.StreamConfig{
+		Name:     "EVENTS",
+		Subjects: []string{"input.events"},
+		Storage:  nats.FileStorage,
+	}
+	if _, err := js.AddStream(mainStreamCfg); err != nil {
+		logger.Warn("EVENTS stream already exists or failed to create", "error", err)
+	}
+
+	subscriberStreams := map[string]string{
+		"consumer.mongo":            "STREAM_CONSUMER_MONGO",
+		"consumer.telegram.bot":     "STREAM_CONSUMER_TELEGRAM_BOT",
+		"consumer.stream.analytics": "STREAM_CONSUMER_STREAM_ANALYTICS",
+	}
+
+	for subj, streamName := range subscriberStreams {
+		streamCfg := &nats.StreamConfig{
+			Name:     streamName,
+			Subjects: []string{subj},
+			Storage:  nats.FileStorage,
+		}
+		if _, err := js.AddStream(streamCfg); err != nil {
+			logger.Warn("Stream already exists or failed to create", "subject", subj, "error", err)
+		}
+	}
+
 	subscription, err := c.setupSubscription()
 	if err != nil {
 		return err
@@ -105,7 +133,8 @@ func (c *Connector) handleMessage(msg *nats.Msg) error {
 		return err
 	}
 
-	if event.Subscriber == "" {
+	// if no subscriber, just ack and skip
+	if event.Subscriber == nil || (event.Subscriber[0] == "" && len(event.Subscriber) == 1) {
 		c.jsClient.JetStreamLogger.Warn("Empty subscriber field, skipping")
 		return msg.Ack()
 	}
@@ -116,16 +145,13 @@ func (c *Connector) handleMessage(msg *nats.Msg) error {
 	}
 
 	js := c.jsClient.JetStreamContext
-	if _, err := js.Publish(event.Subscriber, outBytes); err != nil {
-		return err
+	for _, sub := range event.Subscriber {
+		if _, err := js.Publish(sub, outBytes); err != nil {
+			return err
+		}
+
+		c.jsClient.JetStreamLogger.Info(" handled event for:", "subscriber_name", sub)
 	}
-
-	c.jsClient.JetStreamLogger.Info(" handled:",
-		"subscriber_name", event.Subscriber,
-		"target_subject", event.Subscriber,
-		"size_bytes", len(outBytes),
-	)
-
 	return msg.Ack()
 }
 

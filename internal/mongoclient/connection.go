@@ -1,4 +1,4 @@
-package mongo_client
+package mongoclient
 
 import (
 	"context"
@@ -34,15 +34,19 @@ func (mc *MongoClient) Connect() error {
 
 	mc.Client = client
 	mc.MongoLogger.Info("MongoDB connected successfully", "uri", mc.MongoConfig.URI, "database", mc.MongoConfig.Database)
+
 	return nil
 }
 
 func (mc *MongoClient) Disconnect() error {
 	if mc.Client != nil {
 		ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+
 		defer cancel()
+
 		return mc.Client.Disconnect(ctx)
 	}
+
 	return nil
 }
 
@@ -52,4 +56,14 @@ func (mc *MongoClient) GetDatabase() *mongo.Database {
 
 func (mc *MongoClient) GetCollection(collectionName string) *mongo.Collection {
 	return mc.GetDatabase().Collection(collectionName)
+}
+
+func (mc *MongoClient) DeferMongoDisconnect() func() {
+	return func() {
+		if mc != nil {
+			if err := mc.Disconnect(); err != nil {
+				mc.MongoLogger.Error("Failed to disconnect Mongo", "error", err)
+			}
+		}
+	}
 }

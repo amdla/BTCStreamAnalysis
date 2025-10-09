@@ -4,6 +4,7 @@ services:
       context: ..
       dockerfile: Dockerfile
     container_name: binance-stream-server
+    command: [ "/app/bin/stream-server" ]
     restart: unless-stopped
     env_file:
       - ../.env
@@ -14,4 +15,4 @@ services:
 
 networks:
   app-network:
-    driver: bridge
+    external: true

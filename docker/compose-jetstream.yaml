@@ -1,0 +1,44 @@
+services:
+  jetstream:
+    image: nats:2.10
+    command: [ "-js", "--store_dir", "/data/jetstream" ]
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    volumes:
+      - ./nats-data:/data
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  data-connector:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: data-connector
+    command: [ "/app/bin/data-connector" ]
+    restart: unless-stopped
+    env_file:
+      - ../.env
+    depends_on:
+      - jetstream
+    networks:
+      - app-network
+
+  mongo-sub:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: mongo-sub
+    command: [ "/app/bin/mongo-sub" ]
+    restart: unless-stopped
+    env_file:
+      - ../.env
+    depends_on:
+      - jetstream
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    external: true

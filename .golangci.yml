@@ -1,0 +1,25 @@
+run:
+  timeout: 5m
+
+linters:
+  enable-all: true
+  disable:
+    - lll
+    - funlen
+    - gochecknoglobals
+    - gochecknoinits
+    - godot
+    - revive
+    - depguard
+    - nlreturn
+    - stylecheck
+    - gci
+    - tagalign
+    - wrapcheck
+    - mnd
+    - err113
+
+issues:
+  exclude-use-default: false
+  max-same-issues: 0
+  max-issues-per-linter: 0

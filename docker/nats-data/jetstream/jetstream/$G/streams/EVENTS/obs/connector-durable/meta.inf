@@ -1,1 +1,0 @@
-{"Created":"2025-10-09T13:54:49.469712529Z","Name":"connector-durable","durable_name":"connector-durable","name":"connector-durable","deliver_policy":"all","ack_policy":"explicit","ack_wait":30000000000,"max_deliver":-1,"replay_policy":"instant","max_waiting":512,"max_ack_pending":1000,"num_replicas":0}

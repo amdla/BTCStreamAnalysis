@@ -1,7 +1,7 @@
-package mongo_client
+package mongoclient
 
 import (
-	dataconnector "app/internal/data_connector"
+	"app/internal/jetstream"
 	"context"
 	"encoding/json"
 	"time"
@@ -10,12 +10,13 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 )
 
-func HandleMessage(msg *nats.Msg, mongoClient *MongoClient) {
+func HandleMessage(msg *nats.Msg, mongoClient *MongoClient) error {
 	logger := mongoClient.MongoLogger
-	var event dataconnector.Event
+	var event jetstream.Event
+
 	if err := json.Unmarshal(msg.Data, &event); err != nil {
 		logger.Error("Failed to unmarshal event", "error", err)
-		return
+		return err
 	}
 
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
@@ -32,11 +33,14 @@ func HandleMessage(msg *nats.Msg, mongoClient *MongoClient) {
 	}
 
 	collection := mongoClient.GetCollection("events")
+
 	_, err := collection.InsertOne(ctx, doc)
 	if err != nil {
 		logger.Error("Failed to insert event into MongoDB", "error", err)
-		return
+		return err
 	}
 
 	logger.Info("✅ Event stored in MongoDB", "event_id", event.ID)
+
+	return nil
 }

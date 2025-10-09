@@ -1,15 +1,14 @@
 package main
 
-import (
-	"app/internal/stream_server"
-)
+import "app/internal/streamserver"
 
 func main() {
-	srv := stream_server.NewStreamServer()
+	srv := streamserver.NewStreamServer()
 	if err := srv.MongoClient.Connect(); err != nil {
 		srv.StreamServerLogger.Error("Server connection failed", "error", err)
 		return
 	}
+	defer srv.MongoClient.DeferMongoDisconnect()
 
 	srv.StreamData()
 }

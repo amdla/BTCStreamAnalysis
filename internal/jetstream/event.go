@@ -1,4 +1,4 @@
-package data_connector
+package jetstream
 
 type Event struct {
 	ID          string            `json:"id" bson:"id"`

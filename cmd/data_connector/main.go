@@ -1,16 +1,22 @@
 package main
 
-import "app/internal/data_connector"
+import (
+	"app/internal/dataconnector"
+	"app/internal/jetstream"
+)
 
 func main() {
-	jsClient := data_connector.NewJetStreamClient()
-	connector := data_connector.NewConnector(jsClient)
+	jsClient := jetstream.NewJetStreamClient()
+	connector := dataconnector.NewDataConnector(jsClient)
+	logger := jsClient.JetStreamLogger
 
 	if err := connector.Init(); err != nil {
-		jsClient.JetStreamLogger.Error("Failed to initialize connector", "error", err)
+		logger.Error("Failed to initialize connector", "error", err)
 		connector.Stop()
+
 		return
 	}
+	defer connector.Stop()
 
 	connector.Run()
 }

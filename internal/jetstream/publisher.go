@@ -1,18 +1,16 @@
-package data_connector
+package jetstream
 
 import (
 	"encoding/json"
-	"fmt"
-	"time"
-
 	"log/slog"
+	"time"
 
 	"github.com/nats-io/nats.go"
 )
 
-func (jsClient *JetStreamClient) InitNATS() error {
+func (jsClient *Client) InitNATS() error {
 	logger := jsClient.JetStreamLogger
-	cfg := jsClient.JetStreamConfig
+	cfg := jsClient.Config
 
 	natsURL := cfg.NatsURL
 	streamName := cfg.StreamName
@@ -20,11 +18,13 @@ func (jsClient *JetStreamClient) InitNATS() error {
 
 	// Connect to NATS
 	var err error
+
 	jsClient.NatsConnection, err = nats.Connect(natsURL)
 	if err != nil {
 		logger.Error("Failed to connect to NATS", slog.String("nats_url", natsURL), slog.Any("error", err))
 		return err
 	}
+
 	logger.Info("Connected to NATS", slog.String("nats_url", natsURL))
 
 	// Get JetStream context
@@ -38,6 +38,7 @@ func (jsClient *JetStreamClient) InitNATS() error {
 
 	// Ensure stream exists
 	var msg string
+
 	if _, err := jsClient.JetStreamContext.StreamInfo(streamName); err != nil {
 		_, err := jsClient.JetStreamContext.AddStream(&nats.StreamConfig{
 			Name:     streamName,
@@ -47,15 +48,18 @@ func (jsClient *JetStreamClient) InitNATS() error {
 			logger.Error("Failed to create JetStream stream", slog.String("stream", streamName), slog.Any("error", err))
 			return err
 		}
+
 		msg = "JetStream stream created"
 	} else {
 		msg = "JetStream stream already exists"
 	}
+
 	logger.Info(msg, slog.String("stream", streamName), slog.String("subject", subject))
+
 	return nil
 }
 
-func (jsClient *JetStreamClient) SendEvent(subject string, event Event) error {
+func (jsClient *Client) SendEvent(subject string, event Event) error {
 	logger := jsClient.JetStreamLogger
 
 	if jsClient.JetStreamContext == nil {
@@ -74,6 +78,7 @@ func (jsClient *JetStreamClient) SendEvent(subject string, event Event) error {
 			slog.String("subject", subject),
 			slog.Any("error", err),
 		)
+
 		return err
 	}
 
@@ -81,22 +86,6 @@ func (jsClient *JetStreamClient) SendEvent(subject string, event Event) error {
 		slog.String("subject", subject),
 		slog.Int("payload_bytes", len(data)),
 	)
-	return nil
-}
-
-func (jsClient *JetStreamClient) Close() error {
-	if jsClient == nil {
-		return fmt.Errorf("JetStreamClient is nil")
-	}
-
-	logger := jsClient.JetStreamLogger
-	if jsClient.NatsConnection != nil {
-		if err := jsClient.NatsConnection.Drain(); err != nil {
-			logger.Error("Error draining NATS connection", slog.Any("error", err))
-		}
-		jsClient.NatsConnection.Close()
-		logger.Info("NATS connection closed")
-	}
 
 	return nil
 }

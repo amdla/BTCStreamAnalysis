@@ -10,7 +10,7 @@ RUN go mod download
 COPY . .
 COPY .env /app/.env
 
-# Build the application from cmd/stream_server directory
+# Build the application from cmd/streamserver directory
 RUN CGO_ENABLED=0 GOOS=linux go build -o /app/bin/stream-server ./cmd/stream_server
 RUN CGO_ENABLED=0 GOOS=linux go build -o /app/bin/data-connector ./cmd/data_connector
 RUN CGO_ENABLED=0 GOOS=linux go build -o /app/bin/mongo-sub ./cmd/mongo_sub

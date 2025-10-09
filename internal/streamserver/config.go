@@ -1,9 +1,8 @@
-package stream_server
+package streamserver
 
 import (
-	"app/internal/data_connector"
-	"app/internal/mongo_client"
-	"fmt"
+	"app/internal/jetstream"
+	"app/internal/mongoclient"
 	"log"
 	"log/slog"
 	"os"
@@ -14,13 +13,13 @@ import (
 )
 
 type StreamServer struct {
-	StreamServerConfig StreamServerConfig
+	StreamServerConfig Config
 	StreamServerLogger *slog.Logger
-	MongoClient        *mongo_client.MongoClient
-	JetStreamClient    *data_connector.JetStreamClient
+	MongoClient        *mongoclient.MongoClient
+	JetStreamClient    *jetstream.Client
 }
 
-type StreamServerConfig struct {
+type Config struct {
 	Symbols     []string
 	IsDebugMode bool
 }
@@ -30,10 +29,11 @@ func NewStreamServer() *StreamServer {
 	if err != nil {
 		log.Fatalf("Failed to initialize Stream Server config: %v", err)
 	}
+
 	logger := InitializeStreamServerLogger(config)
 
-	mongoClient := mongo_client.NewMongoClient()
-	jsClient := data_connector.NewJetStreamClient()
+	mongoClient := mongoclient.NewMongoClient()
+	jsClient := jetstream.NewJetStreamClient()
 
 	return &StreamServer{
 		StreamServerConfig: *config,
@@ -43,7 +43,7 @@ func NewStreamServer() *StreamServer {
 	}
 }
 
-func InitializeStreamServerLogger(config *StreamServerConfig) *slog.Logger {
+func InitializeStreamServerLogger(config *Config) *slog.Logger {
 	var level slog.Level
 	if config.IsDebugMode {
 		level = slog.LevelDebug
@@ -55,31 +55,26 @@ func InitializeStreamServerLogger(config *StreamServerConfig) *slog.Logger {
 		Level: level,
 	}))
 
-	logger.Debug("Stream Server starting - Debug: %v Symbols: %v", config.IsDebugMode, config.Symbols)
-
 	return logger
 }
 
-func InitializeStreamServerConfig() (*StreamServerConfig, error) {
+func InitializeStreamServerConfig() (*Config, error) {
 	_ = godotenv.Load()
 
 	viper.AutomaticEnv()
 
 	viper.SetDefault("STREAM_SERVER_DEBUG_MODE", false)
+	viper.SetDefault("SYMBOLS", "BTCUSDT")
 
+	isDebugMode := viper.GetBool("STREAM_SERVER_DEBUG_MODE")
 	rawSymbols := viper.GetString("SYMBOLS")
+
 	symbols := strings.Split(rawSymbols, ",")
 	for i, s := range symbols {
 		symbols[i] = strings.TrimSpace(s)
 	}
 
-	isDebugMode := viper.GetBool("STREAM_SERVER_DEBUG_MODE")
-
-	if len(symbols) == 0 || (len(symbols) == 1 && symbols[0] == "") {
-		return nil, fmt.Errorf("missing STREAM_SERVER_DEBUG_MODE env variable")
-	}
-
-	return &StreamServerConfig{
+	return &Config{
 		Symbols:     symbols,
 		IsDebugMode: isDebugMode,
 	}, nil

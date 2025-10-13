@@ -8,6 +8,15 @@ import (
 	"github.com/nats-io/nats.go"
 )
 
+type Event struct {
+	ID          string   `json:"id" bson:"id"`
+	Subscribers []string `json:"subscribers" bson:"subscribers"`
+	Type        string   `json:"type" bson:"type"`
+	Source      string   `json:"source" bson:"source"`
+	EventData   any      `json:"eventData" bson:"eventData"`
+	CreatedAt   string   `json:"createdAt" bson:"createdAt"`
+}
+
 func (jsClient *Client) InitNATS() error {
 	logger := jsClient.JetStreamLogger
 	cfg := jsClient.Config

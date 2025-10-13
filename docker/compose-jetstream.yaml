@@ -39,6 +39,21 @@ services:
     networks:
       - app-network
 
+  telegram-bot:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: telegram-bot
+    command: [ "/app/bin/telegram-bot" ]
+    restart: unless-stopped
+    env_file:
+      - ../.env
+    depends_on:
+      - jetstream
+    networks:
+      - app-network
+
+
 networks:
   app-network:
     external: true

@@ -139,7 +139,7 @@ func (c *Connector) handleMessage(msg *nats.Msg) {
 		logger.Error("Error marshalling event", "error", err)
 	}
 
-	for _, sub := range event.Subscriber {
+	for _, sub := range event.Subscribers {
 		if _, err := jsContext.Publish(sub, outBytes); err != nil {
 			_ = msg.Nak()
 

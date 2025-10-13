@@ -14,6 +14,7 @@ COPY .env /app/.env
 RUN CGO_ENABLED=0 GOOS=linux go build -o /app/bin/stream-server ./cmd/stream_server
 RUN CGO_ENABLED=0 GOOS=linux go build -o /app/bin/data-connector ./cmd/data_connector
 RUN CGO_ENABLED=0 GOOS=linux go build -o /app/bin/mongo-sub ./cmd/mongo_sub
+RUN CGO_ENABLED=0 GOOS=linux go build -o /app/bin/telegram-bot ./cmd/telegram_bot
 
 # Final stage
 FROM alpine:latest

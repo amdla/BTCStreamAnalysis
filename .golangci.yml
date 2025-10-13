@@ -18,6 +18,8 @@ linters:
     - wrapcheck
     - mnd
     - err113
+    - tagliatelle
+    - perfsprint
 
 issues:
   exclude-use-default: false

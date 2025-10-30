@@ -23,7 +23,7 @@ func InitializeDataConnectorConfig() *Config {
 	viper.SetDefault("CONNECTOR_DURABLE_CONSUMER", "data-connector")
 	viper.SetDefault("CONNECTOR_INPUT_STREAM", "EVENTS")
 	viper.SetDefault("CONNECTOR_INPUT_SUBJECT", "input.events")
-	viper.SetDefault("CONNECTOR_OUTPUT_SUBSCRIBERS", "consumer.mongo,consumer.telegram.bot,consumer.stream.analytics")
+	viper.SetDefault("CONNECTOR_OUTPUT_SUBSCRIBERS", "consumer.mongo,consumer.telegrambot,consumer.stream.analytics")
 
 	rawOutputs := viper.GetString("CONNECTOR_OUTPUT_SUBSCRIBERS")
 

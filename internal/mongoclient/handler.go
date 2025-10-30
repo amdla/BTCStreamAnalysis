@@ -12,6 +12,7 @@ import (
 
 func HandleMessage(msg *nats.Msg, mongoClient *MongoClient) error {
 	logger := mongoClient.MongoLogger
+
 	var event jetstream.Event
 
 	if err := json.Unmarshal(msg.Data, &event); err != nil {
@@ -23,16 +24,15 @@ func HandleMessage(msg *nats.Msg, mongoClient *MongoClient) error {
 	defer cancel()
 
 	doc := bson.M{
-		"event_id":    event.ID,
-		"subscriber":  event.Subscriber,
-		"type":        event.Type,
-		"source":      event.Source,
-		"eventData":   event.EventData,
-		"createdAt":   event.CreatedAt,
-		"processedAt": time.Now().UTC().String(),
+		"event_id":   event.ID,
+		"subscriber": event.Subscribers,
+		"type":       event.Type,
+		"source":     event.Source,
+		"eventData":  event.EventData,
+		"createdAt":  event.CreatedAt,
 	}
 
-	collection := mongoClient.GetCollection("events")
+	collection := mongoClient.GetCollection(event.Type)
 
 	_, err := collection.InsertOne(ctx, doc)
 	if err != nil {

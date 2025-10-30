@@ -4,9 +4,7 @@ import (
 	"app/internal/jetstream"
 	"fmt"
 	"strings"
-	"time"
 
-	"github.com/google/uuid"
 	"github.com/gorilla/websocket"
 )
 
@@ -55,7 +53,7 @@ func (srv *StreamServer) StreamData() {
 		logger.Debug("Received message", "message", string(message))
 
 		// Create an Event
-		event, err := PackWebSocketMessageToEvent(message)
+		event, err := PackObjToEvent(message)
 		if err != nil {
 			logger.Error("Failed to pack message to event", "error", err)
 		}
@@ -69,18 +67,4 @@ func (srv *StreamServer) StreamData() {
 
 		logger.Debug("Published Binance trade event", "event_id", event.ID)
 	}
-}
-
-func PackWebSocketMessageToEvent(message []byte) (jetstream.Event, error) {
-	event := jetstream.Event{
-		ID:          uuid.NewString(),
-		Subscriber:  []string{"consumer.mongo"},
-		Type:        "BinanceTradeEvent",
-		Source:      "WebSocketStreamServer",
-		EventData:   map[string]string{"message": string(message)},
-		CreatedAt:   time.Now().UTC().String(),
-		ProcessedAt: "",
-	}
-
-	return event, nil
 }

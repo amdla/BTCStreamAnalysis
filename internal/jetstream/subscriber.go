@@ -22,6 +22,7 @@ func Subscribe(ctx context.Context, jsContext nats.JetStreamContext, logger *slo
 
 func waitForSubscription(ctx context.Context, jsContext nats.JetStreamContext, logger *slog.Logger, subject, durable string) (*nats.Subscription, error) {
 	var sub *nats.Subscription
+
 	var err error
 
 	for {

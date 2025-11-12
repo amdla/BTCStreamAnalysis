@@ -2,14 +2,13 @@ package telegrambot
 
 import (
 	"app/internal/jetstream"
-	"app/internal/streamserver"
+	"app/internal/models"
 	"encoding/json"
 	"fmt"
 	"io"
 	"log/slog"
 	"net/http"
 	"net/url"
-	"strconv"
 
 	"github.com/nats-io/nats.go"
 )
@@ -26,7 +25,7 @@ func (b *TelegramBot) HandleMessage(msg *nats.Msg) error {
 		return err
 	}
 
-	// Convert event.EventData to []byte reliably
+	// Convert event.EventData to []byte
 	eventBytes, err := json.Marshal(event.EventData)
 	if err != nil {
 		logger.Error("Failed to marshal event data", slog.Any("error", err))
@@ -37,7 +36,7 @@ func (b *TelegramBot) HandleMessage(msg *nats.Msg) error {
 	}
 
 	// Unmarshal into BinanceTradeData
-	var trade streamserver.BinanceTradeData
+	var trade models.BinanceTradeData
 	if err := json.Unmarshal(eventBytes, &trade); err != nil {
 		logger.Error("Failed to parse BinanceTradeData", slog.Any("error", err))
 
@@ -48,22 +47,19 @@ func (b *TelegramBot) HandleMessage(msg *nats.Msg) error {
 
 	if !ValidateTrade(trade) {
 		// nothing to do
-
 		_ = msg.Ack()
 
 		return nil
 	}
 
-	b.TelegramBotLogger.Info("Trade passed filters", slog.String("symbol", trade.Symbol), slog.String("price", trade.Price))
+	b.TelegramBotLogger.Info("Trade passed filters", slog.String("symbol", trade.Symbol), slog.Float64("price", trade.Price))
 
-	price, _ := strconv.ParseFloat(trade.Price, 64)
-	quantity, _ := strconv.ParseFloat(trade.Quantity, 64)
-	totalPrice := price * quantity
+	totalPrice := trade.Price * trade.Quantity
 
 	formattedTotalPrice := formatTotalPrice(totalPrice)
 
 	message := fmt.Sprintf(
-		"🚨 *Trade Alert!*\nSymbol: %s\nPrice: %s\nQty: %s\nTotalPrice: %s",
+		"🚨 *Trade Alert!*\nSymbol: %s\nPrice: %f\nQty: %f\nTotalPrice: %s",
 		trade.Symbol, trade.Price, trade.Quantity, formattedTotalPrice)
 
 	if err := b.sendTelegramMessage(message); err != nil {
@@ -74,7 +70,7 @@ func (b *TelegramBot) HandleMessage(msg *nats.Msg) error {
 		return err
 	}
 
-	logger.Info("Sent Telegram alert", slog.String("symbol", trade.Symbol), slog.String("price", trade.Price))
+	logger.Info("Sent Telegram alert", slog.String("symbol", trade.Symbol), slog.Float64("price", trade.Price))
 
 	_ = msg.Ack()
 
@@ -99,6 +95,7 @@ func (b *TelegramBot) sendTelegramMessage(text string) error {
 	if err != nil {
 		return err
 	}
+
 	defer func() {
 		_ = resp.Body.Close()
 	}()

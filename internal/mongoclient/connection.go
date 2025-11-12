@@ -1,6 +1,7 @@
 package mongoclient
 
 import (
+	"app/internal/repository"
 	"context"
 	"time"
 
@@ -13,13 +14,15 @@ func (mc *MongoClient) Connect() error {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
-	uri := mc.MongoConfig.URI
+	cfg := mc.MongoConfig
+
+	uri := cfg.URI
 	clientOptions := options.Client().ApplyURI(uri)
 
-	if mc.MongoConfig.Username != "" && mc.MongoConfig.Password != "" {
+	if cfg.Username != "" && cfg.Password != "" {
 		clientOptions.SetAuth(options.Credential{
-			Username: mc.MongoConfig.Username,
-			Password: mc.MongoConfig.Password,
+			Username: cfg.Username,
+			Password: cfg.Password,
 		})
 	}
 
@@ -33,7 +36,10 @@ func (mc *MongoClient) Connect() error {
 	}
 
 	mc.Client = client
-	mc.MongoLogger.Info("MongoDB connected successfully", "uri", mc.MongoConfig.URI, "database", mc.MongoConfig.Database)
+	mc.MongoLogger.Info("MongoDB connected successfully", "uri", cfg.URI, "database", cfg.Database)
+
+	mc.BinanceTradeRepo = repository.NewMongoBinanceTradeRepo(client, cfg.Database, cfg.BinanceTradeCollectionName)
+	mc.NotificationRepo = repository.NewMongoNotificationRepo(client, cfg.Database, cfg.NotificationCollectionName)
 
 	return nil
 }

@@ -2,32 +2,20 @@ package telegrambot
 
 import (
 	"app/internal/jetstream"
-	"app/internal/streamserver"
+	"app/internal/models"
 	"encoding/json"
 	"log/slog"
-	"strconv"
 	"time"
 
 	"github.com/google/uuid"
 )
 
-type NotificationData struct {
-	EventTime    string  `json:"eventTime"`
-	Price        string  `json:"price"`
-	Quantity     string  `json:"quantity"`
-	Symbol       string  `json:"symbol"`
-	IsBuyerMaker bool    `json:"isBuyerMaker"`
-	TotalPrice   float64 `json:"totalPrice"`
-}
-
-func (b *TelegramBot) publishNotification(trade streamserver.BinanceTradeData) error {
+func (b *TelegramBot) publishNotification(trade models.BinanceTradeData) error {
 	logger := b.TelegramBotLogger
 
-	price, _ := strconv.ParseFloat(trade.Price, 64)
-	quantity, _ := strconv.ParseFloat(trade.Quantity, 64)
-	totalPrice := price * quantity
+	totalPrice := trade.Price * trade.Quantity
 
-	notification := NotificationData{
+	notification := models.NotificationData{
 		EventTime:    trade.EventTime.String(),
 		Price:        trade.Price,
 		Quantity:     trade.Quantity,

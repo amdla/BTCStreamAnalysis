@@ -40,7 +40,7 @@ func HandleMessage(msg *nats.Msg, mongoClient *MongoClient) error {
 		return err
 	}
 
-	logger.Info("✅ Event stored in MongoDB", "event_id", event.ID)
+	logger.Info("Event stored in MongoDB", "event_id", event.ID)
 
 	return nil
 }

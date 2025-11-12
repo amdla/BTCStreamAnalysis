@@ -1,6 +1,7 @@
 package mongoclient
 
 import (
+	"app/internal/repository"
 	"log/slog"
 	"os"
 
@@ -10,17 +11,21 @@ import (
 )
 
 type MongoClient struct {
-	MongoConfig Config
-	MongoLogger *slog.Logger
-	Client      *mongo.Client
+	MongoConfig      Config
+	MongoLogger      *slog.Logger
+	Client           *mongo.Client
+	BinanceTradeRepo repository.BinanceTradeRepository
+	NotificationRepo repository.NotificationRepository
 }
 
 type Config struct {
-	URI         string
-	Database    string
-	IsDebugMode bool
-	Username    string
-	Password    string
+	URI                        string
+	Database                   string
+	IsDebugMode                bool
+	Username                   string
+	Password                   string
+	BinanceTradeCollectionName string
+	NotificationCollectionName string
 }
 
 func NewMongoClient() *MongoClient {
@@ -59,12 +64,16 @@ func InitializeMongoConfig() *Config {
 	viper.SetDefault("MONGO_DEBUG_MODE", false)
 	viper.SetDefault("MONGO_USERNAME", "")
 	viper.SetDefault("MONGO_PASSWORD", "")
+	viper.SetDefault("MONGO_BINANCE_TRADE_COLLECTION_NAME", "BinanceTradeEvent")
+	viper.SetDefault("MONGO_NOTIFICATION_COLLECTION_NAME", "NotificationEvent")
 
 	return &Config{
-		URI:         viper.GetString("MONGO_URI"),
-		Database:    viper.GetString("MONGO_DATABASE_NAME"),
-		IsDebugMode: viper.GetBool("MONGO_DEBUG_MODE"),
-		Username:    viper.GetString("MONGO_INITDB_ROOT_USERNAME"),
-		Password:    viper.GetString("MONGO_INITDB_ROOT_PASSWORD"),
+		URI:                        viper.GetString("MONGO_URI"),
+		Database:                   viper.GetString("MONGO_DATABASE_NAME"),
+		IsDebugMode:                viper.GetBool("MONGO_DEBUG_MODE"),
+		Username:                   viper.GetString("MONGO_INITDB_ROOT_USERNAME"),
+		Password:                   viper.GetString("MONGO_INITDB_ROOT_PASSWORD"),
+		BinanceTradeCollectionName: viper.GetString("MONGO_BINANCE_TRADE_COLLECTION_NAME"),
+		NotificationCollectionName: viper.GetString("MONGO_NOTIFICATION_COLLECTION_NAME"),
 	}
 }

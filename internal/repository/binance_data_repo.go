@@ -149,7 +149,7 @@ func buildBinanceQuery(filter *BinanceTradeFilter) (bson.M, *options.FindOptions
 		query[fieldPrefix+"TradeTime"] = tradeTimeFilter
 	}
 
-	if filter.Regex != nil {
+	if filter.Regex != nil && *filter.Regex != "" {
 		regexQuery := bson.M{"$regex": *filter.Regex, "$options": "i"}
 
 		query["$or"] = []bson.M{

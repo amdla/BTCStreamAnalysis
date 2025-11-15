@@ -2,14 +2,14 @@ package main
 
 import (
 	"app/internal/jetstream"
-	"app/internal/mongoclient"
+	"app/internal/mongo"
 	"app/internal/utils"
 
 	"github.com/nats-io/nats.go"
 )
 
 func main() {
-	mongoClient := mongoclient.NewMongoClient()
+	mongoClient := mongo.NewMongoClient()
 	jsClient := jetstream.NewJetStreamClient()
 	logger := mongoClient.MongoLogger
 
@@ -30,10 +30,10 @@ func main() {
 	subject := "consumer.mongo"
 	durable := "mongo-subscriber-durable"
 
-	logger.Info("Starting Mongo subscriber", "subject", subject)
+	logger.Info("Starting MongoClient subscriber", "subject", subject)
 
 	handler := func(msg *nats.Msg) error {
-		err := mongoclient.HandleMessage(msg, mongoClient)
+		err := mongo.HandleMessage(msg, mongoClient)
 		return err
 	}
 

@@ -25,6 +25,22 @@ services:
     networks:
       - app-network
 
+  graphql-server:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: graphql-server
+    command: [ "/app/bin/graphql-server" ]
+    restart: unless-stopped
+    env_file:
+      - ../.env
+    ports:
+      - "8085:8085"
+    networks:
+      - app-network
+    depends_on:
+      - mongodb
+
 volumes:
   mongodb_data:
 

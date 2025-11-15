@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"log/slog"
+	"os"
 	"time"
 
 	"github.com/nats-io/nats.go"
@@ -27,6 +28,23 @@ func NewJetStreamClient() *Client {
 		NatsConnection:   nil,
 		JetStreamContext: nil,
 	}
+}
+
+func InitializeJetStreamLogger(debug bool) *slog.Logger {
+	level := slog.LevelInfo
+	if debug {
+		level = slog.LevelDebug
+	}
+
+	logger := slog.New(slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{
+		Level: level,
+	}))
+
+	logger.Info("JetStream logger initialized",
+		slog.Bool("debug", debug),
+	)
+
+	return logger
 }
 
 func (jsClient *Client) Connect() error {

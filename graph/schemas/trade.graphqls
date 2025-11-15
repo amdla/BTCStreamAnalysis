@@ -1,0 +1,38 @@
+type BinanceTradeData {
+    ID: ID!
+    Stream: String!
+    EventType: String!
+    EventTime: Timestamp!
+    AggregateID: Int64!
+    Symbol: String!
+    Price: Float!
+    Quantity: Float!
+    FirstTradeID: Int64!
+    LastTradeID: Int64!
+    TradeTime: Timestamp!
+    IsBuyerMaker: Boolean!
+}
+
+input BinanceTradeFilter {
+    ID: ID
+    Stream: String
+    EventType: String
+    AggregateID: Int64
+    Symbol: String
+    FirstTradeID: Int64
+    LastTradeID: Int64
+    IsBuyerMaker: Boolean
+
+    Price: NumericFilterInput
+    Quantity: NumericFilterInput
+    EventTime: TimeFilterInput
+    TradeTime: TimeFilterInput
+
+    Regex: String
+    Limit: Int64
+
+    SortField1: String
+    SortDir1: SortDirection
+    SortField2: String
+    SortDir2: SortDirection
+}

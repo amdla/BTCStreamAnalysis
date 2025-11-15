@@ -42,11 +42,11 @@ func buildTimeRange(after, before *time.Time) bson.M {
 	filter := bson.M{}
 
 	if after != nil {
-		filter["$gte"] = *after
+		filter["$gte"] = after.UTC().Format(time.RFC3339Nano)
 	}
 
 	if before != nil {
-		filter["$lte"] = *before
+		filter["$lte"] = before.UTC().Format(time.RFC3339Nano)
 	}
 
 	return filter

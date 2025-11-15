@@ -1,4 +1,4 @@
-package mongoclient
+package mongo
 
 import (
 	"app/internal/repository"
@@ -10,7 +10,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/readpref"
 )
 
-func (mc *MongoClient) Connect() error {
+func (mc *Client) Connect() error {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
@@ -44,7 +44,7 @@ func (mc *MongoClient) Connect() error {
 	return nil
 }
 
-func (mc *MongoClient) Disconnect() error {
+func (mc *Client) Disconnect() error {
 	if mc.Client != nil {
 		ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 
@@ -56,19 +56,19 @@ func (mc *MongoClient) Disconnect() error {
 	return nil
 }
 
-func (mc *MongoClient) GetDatabase() *mongo.Database {
+func (mc *Client) GetDatabase() *mongo.Database {
 	return mc.Client.Database(mc.MongoConfig.Database)
 }
 
-func (mc *MongoClient) GetCollection(collectionName string) *mongo.Collection {
+func (mc *Client) GetCollection(collectionName string) *mongo.Collection {
 	return mc.GetDatabase().Collection(collectionName)
 }
 
-func (mc *MongoClient) DeferMongoDisconnect() func() {
+func (mc *Client) DeferMongoDisconnect() func() {
 	return func() {
 		if mc != nil {
 			if err := mc.Disconnect(); err != nil {
-				mc.MongoLogger.Error("Failed to disconnect Mongo", "error", err)
+				mc.MongoLogger.Error("Failed to disconnect Client", "error", err)
 			}
 		}
 	}

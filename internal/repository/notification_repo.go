@@ -124,7 +124,7 @@ func buildNotificationQuery(filter *NotificationFilter) (bson.M, *options.FindOp
 		query[fieldPrefix+"TotalPrice"] = totalFilter
 	}
 
-	if filter.Regex != nil {
+	if filter.Regex != nil && *filter.Regex != "" {
 		regexQuery := bson.M{"$regex": *filter.Regex, "$options": "i"}
 
 		query["$or"] = []bson.M{

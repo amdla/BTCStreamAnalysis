@@ -1,6 +1,6 @@
-<mxfile host="drawio-plugin" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" modified="2025-10-30T17:20:07.528Z" etag="sdt9u1Gc8xzyGtKy3BOB" version="22.1.22" type="embed">
+<mxfile host="drawio-plugin" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" modified="2025-11-15T15:34:25.205Z" etag="PDxvkOkOUMS2uH8eP93R" version="22.1.22" type="embed">
   <diagram name="Strona-1" id="bw9nvC8GLy4kfHjRbGMX">
-    <mxGraphModel dx="365" dy="173" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="889" dy="510" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -69,7 +69,7 @@
         <mxCell id="82cBRN62AVHNBTPDSvh4-17" value="Alert service&lt;div&gt;Telegram bot&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="236" y="470" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="82cBRN62AVHNBTPDSvh4-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;exitX=1.008;exitY=0.824;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.025;entryY=0.505;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="82cBRN62AVHNBTPDSvh4-22" edge="1">
+        <mxCell id="82cBRN62AVHNBTPDSvh4-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;exitX=1.008;exitY=0.824;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.025;entryY=0.505;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" target="82cBRN62AVHNBTPDSvh4-22" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="430" y="281" as="targetPoint" />
             <mxPoint x="356.96000000000004" y="280.05" as="sourcePoint" />
@@ -84,7 +84,7 @@
         <mxCell id="82cBRN62AVHNBTPDSvh4-20" value="Data Lake" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="426" y="150" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="82cBRN62AVHNBTPDSvh4-22" target="82cBRN62AVHNBTPDSvh4-27">
+        <mxCell id="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="82cBRN62AVHNBTPDSvh4-22" target="82cBRN62AVHNBTPDSvh4-27" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="544" y="330" />
@@ -92,7 +92,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="82cBRN62AVHNBTPDSvh4-22" value="GraphQL API service" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="82cBRN62AVHNBTPDSvh4-22" value="GraphQL API service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="484" y="250" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="82cBRN62AVHNBTPDSvh4-27" value="Historical analytics" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -115,7 +115,7 @@
             <mxPoint x="-35" y="-3" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1" target="82cBRN62AVHNBTPDSvh4-22">
+        <mxCell id="6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="82cBRN62AVHNBTPDSvh4-22" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="484" y="350" as="sourcePoint" />
             <mxPoint x="544" y="320" as="targetPoint" />

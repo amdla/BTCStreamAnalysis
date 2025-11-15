@@ -1,0 +1,22 @@
+enum SortDirection {
+    ASC
+    DESC
+}
+
+scalar Timestamp
+scalar Int64
+
+input NumericFilterInput {
+    eq: Float
+    ne: Float
+    gt: Float
+    gte: Float
+    lt: Float
+    lte: Float
+}
+
+input TimeFilterInput {
+    after: Timestamp
+    before: Timestamp
+}
+

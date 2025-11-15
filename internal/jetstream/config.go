@@ -2,8 +2,6 @@ package jetstream
 
 import (
 	"log"
-	"log/slog"
-	"os"
 
 	"github.com/joho/godotenv"
 	"github.com/spf13/viper"
@@ -41,21 +39,4 @@ func InitializeJetStreamConfig() *Config {
 	}
 
 	return cfg
-}
-
-func InitializeJetStreamLogger(debug bool) *slog.Logger {
-	level := slog.LevelInfo
-	if debug {
-		level = slog.LevelDebug
-	}
-
-	logger := slog.New(slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{
-		Level: level,
-	}))
-
-	logger.Info("JetStream logger initialized",
-		slog.Bool("debug", debug),
-	)
-
-	return logger
 }

@@ -1,4 +1,4 @@
-package mongoclient
+package mongo
 
 import (
 	"app/internal/jetstream"
@@ -10,7 +10,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 )
 
-func HandleMessage(msg *nats.Msg, mongoClient *MongoClient) error {
+func HandleMessage(msg *nats.Msg, mongoClient *Client) error {
 	logger := mongoClient.MongoLogger
 
 	var event jetstream.Event

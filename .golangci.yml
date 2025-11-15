@@ -2,7 +2,6 @@ run:
   timeout: 5m
 
 linters:
-  enable-all: true
   disable:
     - lll
     - funlen
@@ -22,6 +21,5 @@ linters:
     - perfsprint
 
 issues:
-  exclude-use-default: false
   max-same-issues: 0
   max-issues-per-linter: 0

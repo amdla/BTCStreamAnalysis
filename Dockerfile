@@ -16,6 +16,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o /app/bin/data-connector ./cmd/data_conn
 RUN CGO_ENABLED=0 GOOS=linux go build -o /app/bin/mongo-sub ./cmd/mongo_sub
 RUN CGO_ENABLED=0 GOOS=linux go build -o /app/bin/telegram-bot ./cmd/telegram_bot
 RUN CGO_ENABLED=0 GOOS=linux go build -o /app/bin/graphql-server ./cmd/graphql
+RUN CGO_ENABLED=0 GOOS=linux go build -o /app/bin/minio ./cmd/minio
 
 # Final stage
 FROM alpine:latest

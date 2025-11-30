@@ -52,8 +52,6 @@ func (b *TelegramBot) HandleMessage(msg *nats.Msg) error {
 		return nil
 	}
 
-	b.TelegramBotLogger.Info("Trade passed filters", slog.String("symbol", trade.Symbol), slog.Float64("price", trade.Price))
-
 	totalPrice := trade.Price * trade.Quantity
 
 	formattedTotalPrice := formatTotalPrice(totalPrice)

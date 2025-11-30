@@ -7,4 +7,5 @@ type NotificationData struct {
 	Symbol       string  `bson:"Symbol" json:"Symbol"`
 	IsBuyerMaker bool    `bson:"IsBuyerMaker" json:"IsBuyerMaker"`
 	TotalPrice   float64 `bson:"TotalPrice" json:"TotalPrice"`
+	TradeID      string  `bson:"TradeID" json:"TradeID"`
 }

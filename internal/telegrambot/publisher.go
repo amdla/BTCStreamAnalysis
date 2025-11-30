@@ -16,12 +16,13 @@ func (b *TelegramBot) publishNotification(trade models.BinanceTradeData) error {
 	totalPrice := trade.Price * trade.Quantity
 
 	notification := models.NotificationData{
-		EventTime:    trade.EventTime.String(),
+		EventTime:    trade.EventTime.UTC().Format(time.RFC3339Nano),
 		Price:        trade.Price,
 		Quantity:     trade.Quantity,
 		Symbol:       trade.Symbol,
 		IsBuyerMaker: trade.IsBuyerMaker,
 		TotalPrice:   totalPrice,
+		TradeID:      trade.ID,
 	}
 
 	notificationEvent := jetstream.Event{

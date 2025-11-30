@@ -50,6 +50,7 @@ type BinanceTradeFilter struct {
 
 type BinanceTradeRepository interface {
 	Find(ctx context.Context, filter *BinanceTradeFilter) ([]models.BinanceTradeData, error)
+	DeleteByIDs(ctx context.Context, ids []string) (int64, error)
 }
 
 type MongoBinanceTradeRepo struct {
@@ -87,6 +88,19 @@ func (r *MongoBinanceTradeRepo) Find(ctx context.Context, filter *BinanceTradeFi
 	}
 
 	return trades, nil
+}
+
+func (r *MongoBinanceTradeRepo) DeleteByIDs(ctx context.Context, ids []string) (int64, error) {
+	if len(ids) == 0 {
+		return 0, nil
+	}
+
+	res, err := r.collection.DeleteMany(ctx, bson.M{"eventData.ID": bson.M{"$in": ids}})
+	if err != nil {
+		return 0, err
+	}
+
+	return res.DeletedCount, nil
 }
 
 func buildBinanceQuery(filter *BinanceTradeFilter) (bson.M, *options.FindOptions) {

@@ -54,19 +54,20 @@ services:
     networks:
       - app-network
 
-  minio-client:
+  etl:
     build:
       context: ..
       dockerfile: Dockerfile
-    container_name: minio-client
-    command: [ "/app/bin/minio" ]
+    container_name: etl
+    command: [ "/app/bin/etl" ]
     restart: unless-stopped
     env_file:
       - ../.env
+    depends_on:
+      - mongodb
+      - minio
     networks:
       - app-network
-    depends_on:
-      - minio
 
 volumes:
   mongodb_data:

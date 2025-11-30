@@ -52,8 +52,8 @@ func InitializeMinioLogger(debug bool) *slog.Logger {
 	return logger
 }
 
-func (c *Client) Insert(bucketName, objectName string, reader io.Reader, objectSize int64) (minio.UploadInfo, error) {
-	return c.MinioClient.PutObject(context.Background(), bucketName, objectName, reader, objectSize, minio.PutObjectOptions{})
+func (c *Client) Insert(bucketName, objectName string, reader io.Reader, objectSize int64, opts minio.PutObjectOptions) (minio.UploadInfo, error) {
+	return c.MinioClient.PutObject(context.Background(), bucketName, objectName, reader, objectSize, opts)
 }
 
 func (c *Client) MakeBucketOptions() minio.MakeBucketOptions {

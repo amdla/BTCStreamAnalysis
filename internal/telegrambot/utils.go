@@ -40,5 +40,5 @@ func formatTotalPrice(price float64) string {
 }
 
 func ValidateTrade(trade models.BinanceTradeData) bool {
-	return trade.Price*trade.Quantity > 1_500_000
+	return trade.Price*trade.Quantity > 2_000_000
 }

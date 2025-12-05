@@ -102,17 +102,22 @@ func (r *MongoNotificationRepo) DeleteByKeys(ctx context.Context, keys []Notific
 	}
 
 	filters := make([]bson.M, len(keys))
+
 	for i, key := range keys {
 		filter := bson.M{}
+
 		if key.Symbol != "" {
 			filter["eventData.Symbol"] = key.Symbol
 		}
+
 		if key.EventTime != "" {
 			filter["eventData.EventTime"] = key.EventTime
 		}
+
 		if key.TradeID != "" {
 			filter["eventData.TradeID"] = key.TradeID
 		}
+
 		filters[i] = filter
 	}
 

@@ -27,6 +27,7 @@ func NewMinioClient() *Client {
 	})
 	if err != nil {
 		logger.Error("Failed to create Minio client", slog.Any("error", err))
+
 		minioClient = nil
 	}
 

@@ -1,6 +1,8 @@
 package etl
 
 import (
+	"log/slog"
+	"os"
 	"time"
 
 	"github.com/joho/godotenv"
@@ -17,6 +19,15 @@ type Config struct {
 	CuratedPath   string
 	AnalyticsPath string
 	IsDebugMode   bool
+}
+
+func InitializeLogger(debug bool) *slog.Logger {
+	level := slog.LevelInfo
+	if debug {
+		level = slog.LevelDebug
+	}
+
+	return slog.New(slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{Level: level}))
 }
 
 func InitializeConfig() *Config {

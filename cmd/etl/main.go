@@ -15,6 +15,7 @@ func main() {
 	mongoClient := mongo.NewMongoClient()
 	if err := mongoClient.Connect(); err != nil {
 		logger.Error("Failed to connect to MongoDB", slog.Any("error", err))
+
 		return
 	}
 	defer mongoClient.DeferMongoDisconnect()
@@ -22,6 +23,7 @@ func main() {
 	minioClient := minio.NewMinioClient()
 	if minioClient.MinioClient == nil {
 		logger.Error("Failed to initialize MinIO client")
+
 		return
 	}
 

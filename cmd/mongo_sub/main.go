@@ -15,12 +15,14 @@ func main() {
 
 	if err := jsClient.InitNATS(); err != nil {
 		logger.Error("Failed to initialize NATS JetStream", "error", err)
+
 		return
 	}
 	defer jsClient.DeferJetStreamClose()
 
 	if err := mongoClient.Connect(); err != nil {
 		logger.Error("Failed to connect to MongoDB", "error", err)
+
 		return
 	}
 	defer mongoClient.DeferMongoDisconnect()
@@ -34,6 +36,7 @@ func main() {
 
 	handler := func(msg *nats.Msg) error {
 		err := mongo.HandleMessage(msg, mongoClient)
+
 		return err
 	}
 

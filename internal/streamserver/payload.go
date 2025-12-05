@@ -5,7 +5,6 @@ import (
 	"app/internal/models"
 	"encoding/json"
 	"log"
-	"math"
 	"strconv"
 	"time"
 
@@ -33,6 +32,7 @@ func createDataObj(message []byte) models.BinanceTradeData {
 
 	if err := json.Unmarshal(message, &raw); err != nil {
 		log.Printf("Failed to unmarshal raw data: %v", err)
+
 		return models.BinanceTradeData{ID: uuid.New().String()}
 	}
 
@@ -40,7 +40,6 @@ func createDataObj(message []byte) models.BinanceTradeData {
 	if err != nil {
 		log.Printf("Failed to parse price: %v", err)
 	}
-	price = math.Round(price*1e5) / 1e5
 
 	quantity, err := strconv.ParseFloat(raw.Data.Quantity, 64)
 	if err != nil {

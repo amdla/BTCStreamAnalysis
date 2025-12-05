@@ -11,7 +11,8 @@ import (
 	"github.com/nats-io/nats.go"
 )
 
-const BatchSize = 10
+const BatchSize = 20
+const MaxAckPending = 1000
 
 type Connector struct {
 	Cfg      *Config
@@ -72,7 +73,7 @@ func (c *Connector) Init() error {
 	consumerCfg := &nats.ConsumerConfig{
 		Durable:       c.Cfg.InputDurable,
 		AckPolicy:     nats.AckExplicitPolicy,
-		MaxAckPending: 1000,
+		MaxAckPending: MaxAckPending,
 	}
 
 	inputStreamName := c.Cfg.InputStreamName
@@ -102,6 +103,7 @@ func (c *Connector) Run() {
 		select {
 		case <-c.ctx.Done():
 			logger.Info("Connector shutting down")
+
 			return
 		default:
 		}
@@ -128,6 +130,7 @@ func (c *Connector) handleMessage(msg *nats.Msg) {
 
 	if err := json.Unmarshal(msg.Data, &event); err != nil {
 		_ = msg.Nak()
+
 		return
 	}
 

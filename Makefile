@@ -19,7 +19,8 @@ clean:
 
 lint:
 	@echo "Running golangci-lint..."
-	@$(LINTER) run --enable-all \
+	@$(LINTER) run \
+		--enable-all \
 		--max-issues-per-linter=0 \
 		--out-format=tab \
 		$(PKG)

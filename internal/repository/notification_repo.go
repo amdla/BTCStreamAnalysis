@@ -42,10 +42,21 @@ type NotificationFilter struct {
 	SortDir1   *SortDirection
 	SortField2 *string
 	SortDir2   *SortDirection
+
+	TradeID  *string
+	TradeIDs []string
 }
 
 type NotificationRepository interface {
 	Find(ctx context.Context, filter *NotificationFilter) ([]models.NotificationData, error)
+	DeleteByKeys(ctx context.Context, keys []NotificationKey) (int64, error)
+	DeleteByTradeIDs(ctx context.Context, ids []string) (int64, error)
+}
+
+type NotificationKey struct {
+	Symbol    string
+	EventTime string
+	TradeID   string
 }
 
 type MongoNotificationRepo struct {
@@ -83,6 +94,52 @@ func (r *MongoNotificationRepo) Find(ctx context.Context, filter *NotificationFi
 	}
 
 	return notifications, nil
+}
+
+func (r *MongoNotificationRepo) DeleteByKeys(ctx context.Context, keys []NotificationKey) (int64, error) {
+	if len(keys) == 0 {
+		return 0, nil
+	}
+
+	filters := make([]bson.M, len(keys))
+
+	for i, key := range keys {
+		filter := bson.M{}
+
+		if key.Symbol != "" {
+			filter["eventData.Symbol"] = key.Symbol
+		}
+
+		if key.EventTime != "" {
+			filter["eventData.EventTime"] = key.EventTime
+		}
+
+		if key.TradeID != "" {
+			filter["eventData.TradeID"] = key.TradeID
+		}
+
+		filters[i] = filter
+	}
+
+	res, err := r.collection.DeleteMany(ctx, bson.M{"$or": filters})
+	if err != nil {
+		return 0, err
+	}
+
+	return res.DeletedCount, nil
+}
+
+func (r *MongoNotificationRepo) DeleteByTradeIDs(ctx context.Context, ids []string) (int64, error) {
+	if len(ids) == 0 {
+		return 0, nil
+	}
+
+	res, err := r.collection.DeleteMany(ctx, bson.M{"eventData.TradeID": bson.M{"$in": ids}})
+	if err != nil {
+		return 0, err
+	}
+
+	return res.DeletedCount, nil
 }
 
 func buildNotificationQuery(filter *NotificationFilter) (bson.M, *options.FindOptions) {
@@ -131,6 +188,14 @@ func buildNotificationQuery(filter *NotificationFilter) (bson.M, *options.FindOp
 			{fieldPrefix + "EventTime": regexQuery},
 			{fieldPrefix + "Symbol": regexQuery},
 		}
+	}
+
+	if filter.TradeID != nil {
+		query[fieldPrefix+"TradeID"] = *filter.TradeID
+	}
+
+	if len(filter.TradeIDs) > 0 {
+		query[fieldPrefix+"TradeID"] = bson.M{"$in": filter.TradeIDs}
 	}
 
 	if filter.Limit != nil {

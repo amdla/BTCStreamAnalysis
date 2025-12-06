@@ -17,6 +17,7 @@ func HandleMessage(msg *nats.Msg, mongoClient *Client) error {
 
 	if err := json.Unmarshal(msg.Data, &event); err != nil {
 		logger.Error("Failed to unmarshal event", "error", err)
+
 		return err
 	}
 
@@ -37,6 +38,7 @@ func HandleMessage(msg *nats.Msg, mongoClient *Client) error {
 	_, err := collection.InsertOne(ctx, doc)
 	if err != nil {
 		logger.Error("Failed to insert event into MongoDB", "error", err)
+
 		return err
 	}
 

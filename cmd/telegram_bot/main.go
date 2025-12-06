@@ -24,6 +24,7 @@ func main() {
 
 	if err := jsClient.InitNATS(); err != nil {
 		logger.Error("Failed to initialize NATS JetStream", "error", err)
+
 		return
 	}
 	defer jsClient.DeferJetStreamClose()

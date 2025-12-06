@@ -15,6 +15,7 @@ func (srv *StreamServer) StreamData() {
 
 	if err := srv.JetStreamClient.InitNATS(); err != nil {
 		logger.Error("Failed to initialize NATS JetStream", "error", err)
+
 		return
 	}
 
@@ -31,6 +32,7 @@ func (srv *StreamServer) StreamData() {
 	conn, _, err := websocket.DefaultDialer.Dial(url, nil)
 	if err != nil {
 		logger.Error("Failed to connect to Binance Futures", "error", err)
+
 		return
 	}
 	defer func(conn *websocket.Conn) {
@@ -47,6 +49,7 @@ func (srv *StreamServer) StreamData() {
 		_, message, err := conn.ReadMessage()
 		if err != nil {
 			logger.Error("Error reading message", "error", err)
+
 			break
 		}
 

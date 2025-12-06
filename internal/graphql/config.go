@@ -6,7 +6,7 @@ import (
 )
 
 type Config struct {
-	ServerUrl   string
+	ServerURL   string
 	IsDebugMode bool
 }
 
@@ -19,7 +19,7 @@ func InitializeGqlConfig() *Config {
 	viper.SetDefault("GRAPHQL_SERVER_URL", ":8085")
 
 	cfg := &Config{
-		ServerUrl:   viper.GetString("GRAPHQL_SERVER_URL"),
+		ServerURL:   viper.GetString("GRAPHQL_SERVER_URL"),
 		IsDebugMode: viper.GetBool("GRAPHQL_DEBUG_MODE"),
 	}
 

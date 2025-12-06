@@ -31,6 +31,7 @@ func (jsClient *Client) InitNATS() error {
 	jsClient.NatsConnection, err = nats.Connect(natsURL)
 	if err != nil {
 		logger.Error("Failed to connect to NATS", slog.String("nats_url", natsURL), slog.Any("error", err))
+
 		return err
 	}
 
@@ -40,6 +41,7 @@ func (jsClient *Client) InitNATS() error {
 	jsClient.JetStreamContext, err = jsClient.NatsConnection.JetStream()
 	if err != nil {
 		logger.Error("Failed to get JetStream context", slog.Any("error", err))
+
 		return err
 	}
 
@@ -55,6 +57,7 @@ func (jsClient *Client) InitNATS() error {
 		})
 		if err != nil {
 			logger.Error("Failed to create JetStream stream", slog.String("stream", streamName), slog.Any("error", err))
+
 			return err
 		}
 
@@ -78,6 +81,7 @@ func (jsClient *Client) SendEvent(subject string, event Event) error {
 	data, err := json.Marshal(event)
 	if err != nil {
 		logger.Error("Failed to marshal event", slog.Any("error", err))
+
 		return err
 	}
 

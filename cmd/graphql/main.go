@@ -20,6 +20,7 @@ func main() {
 	if err := mongoClient.Connect(); err != nil {
 		logger.Error("Failed to connect to MongoDB", slog.Any("error", err))
 	}
+
 	defer func() {
 		if err := mongoClient.Disconnect(); err != nil {
 			logger.Error("Failed to disconnect from MongoDB", slog.Any("error", err))
@@ -38,10 +39,10 @@ func main() {
 	http.Handle("/graphql", playground.Handler("GraphQL playground", "/query"))
 	http.Handle("/query", srv)
 
-	serverUrl := gqlClient.GraphqlConfig.ServerUrl
-	logger.Info("Started GraphQL server at", slog.String("url", serverUrl))
+	serverURL := gqlClient.GraphqlConfig.ServerURL
+	logger.Info("Started GraphQL server at", slog.String("url", serverURL))
 
-	if err := http.ListenAndServe(serverUrl, nil); err != nil {
+	if err := http.ListenAndServe(serverURL, nil); err != nil {
 		logger.Error("HTTP server failed", slog.Any("error", err))
 	}
 }

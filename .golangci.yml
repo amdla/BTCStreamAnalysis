@@ -3,22 +3,19 @@ run:
 
 linters:
   disable:
-    - lll
-    - funlen
-    - gochecknoglobals
-    - gochecknoinits
-    - godot
-    - revive
+    - exhaustruct
+    - varnamelen
+    - gofumpt
     - depguard
-    - nlreturn
-    - stylecheck
-    - gci
-    - tagalign
-    - wrapcheck
+    - lll
     - mnd
-    - err113
+    - tagalign
     - tagliatelle
+    - wrapcheck
+    - gci
+    - err113
     - perfsprint
+    - prealloc
 
 issues:
   max-same-issues: 0

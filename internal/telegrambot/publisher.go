@@ -16,12 +16,13 @@ func (b *TelegramBot) publishNotification(trade models.BinanceTradeData) error {
 	totalPrice := trade.Price * trade.Quantity
 
 	notification := models.NotificationData{
-		EventTime:    trade.EventTime.String(),
+		EventTime:    trade.EventTime.UTC().Format(time.RFC3339Nano),
 		Price:        trade.Price,
 		Quantity:     trade.Quantity,
 		Symbol:       trade.Symbol,
 		IsBuyerMaker: trade.IsBuyerMaker,
 		TotalPrice:   totalPrice,
+		TradeID:      trade.ID,
 	}
 
 	notificationEvent := jetstream.Event{
@@ -33,9 +34,16 @@ func (b *TelegramBot) publishNotification(trade models.BinanceTradeData) error {
 		CreatedAt:   time.Now().UTC().String(),
 	}
 
-	eventBytes, _ := json.Marshal(notificationEvent)
-	if _, err := b.JsClient.JetStreamContext.Publish("consumer.mongo", eventBytes); err != nil {
+	eventBytes, err := json.Marshal(notificationEvent)
+	if err != nil {
+		logger.Error("Failed to marshal notification event", slog.Any("error", err))
+
+		return err
+	}
+
+	if _, err = b.JsClient.JetStreamContext.Publish("consumer.mongo", eventBytes); err != nil {
 		logger.Error("Failed to publish notification event", slog.Any("error", err))
+
 		return err
 	}
 

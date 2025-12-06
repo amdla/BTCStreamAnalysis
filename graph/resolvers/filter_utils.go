@@ -9,7 +9,9 @@ func mapSortDir(dir *model.SortDirection) *repository.SortDirection {
 	if dir == nil {
 		return nil
 	}
+
 	var v repository.SortDirection
+
 	switch *dir {
 	case model.SortDirectionAsc:
 		v = repository.SortDirection(1)
@@ -18,6 +20,7 @@ func mapSortDir(dir *model.SortDirection) *repository.SortDirection {
 	default:
 		return nil
 	}
+
 	return &v
 }
 

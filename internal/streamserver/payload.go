@@ -32,6 +32,7 @@ func createDataObj(message []byte) models.BinanceTradeData {
 
 	if err := json.Unmarshal(message, &raw); err != nil {
 		log.Printf("Failed to unmarshal raw data: %v", err)
+
 		return models.BinanceTradeData{ID: uuid.New().String()}
 	}
 

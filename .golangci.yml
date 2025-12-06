@@ -1,0 +1,22 @@
+run:
+  timeout: 5m
+
+linters:
+  disable:
+    - exhaustruct
+    - varnamelen
+    - gofumpt
+    - depguard
+    - lll
+    - mnd
+    - tagalign
+    - tagliatelle
+    - wrapcheck
+    - gci
+    - err113
+    - perfsprint
+    - prealloc
+
+issues:
+  max-same-issues: 0
+  max-issues-per-linter: 0

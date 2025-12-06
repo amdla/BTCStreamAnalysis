@@ -1,0 +1,26 @@
+type NotificationData {
+    EventTime: String!
+    Price: Float!
+    Quantity: Float!
+    Symbol: String!
+    IsBuyerMaker: Boolean!
+    TotalPrice: Float!
+}
+
+input NotificationFilter {
+    EventTime: String
+    Symbol: String
+    IsBuyerMaker: Boolean
+
+    Price: NumericFilterInput
+    Quantity: NumericFilterInput
+    TotalPrice: NumericFilterInput
+
+    Regex: String
+    Limit: Int64
+
+    SortField1: String
+    SortDir1: SortDirection
+    SortField2: String
+    SortDir2: SortDirection
+}

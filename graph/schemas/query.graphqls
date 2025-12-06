@@ -1,0 +1,4 @@
+type Query {
+    trades(filter: BinanceTradeFilter): [BinanceTradeData!]!
+    notifications(filter: NotificationFilter): [NotificationData!]!
+}

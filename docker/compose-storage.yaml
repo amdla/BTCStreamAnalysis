@@ -1,0 +1,78 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    env_file:
+      - ../.env
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - app-network
+
+  mongo-express:
+    image: mongo-express:latest
+    container_name: mongo-express
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    env_file:
+      - ../.env
+    depends_on:
+      - mongodb
+    networks:
+      - app-network
+
+  graphql-server:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: graphql-server
+    command: [ "/app/bin/graphql-server" ]
+    restart: unless-stopped
+    env_file:
+      - ../.env
+    ports:
+      - "8085:8085"
+    networks:
+      - app-network
+    depends_on:
+      - mongodb
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    env_file:
+      - ../.env
+    command: server /data --console-address ":9001"
+    networks:
+      - app-network
+
+  etl:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: etl
+    command: [ "/app/bin/etl" ]
+    restart: unless-stopped
+    env_file:
+      - ../.env
+    depends_on:
+      - mongodb
+      - minio
+    networks:
+      - app-network
+
+volumes:
+  mongodb_data:
+  minio_data:
+
+networks:
+  app-network:
+    external: true

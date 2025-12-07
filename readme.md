@@ -20,8 +20,8 @@ The system is built on a microservice architecture with the following components
 ## Prerequisites
 
 - **Go** 1.20 or higher
-- **Docker** & **Docker Compose**
-- **Telegram Bot Token** (from BotFather)
+- **Docker CLI** & **Docker Compose**
+- **Telegram Bot Token** (from BotFather) for notification service
 
 ## Setup Instructions
 
@@ -45,6 +45,12 @@ TELEGRAM_CHAT_ID=<your_telegram_chat_id>
 All other variables are pre-configured in the sample file. The rest of the setup is ready to go.
 
 ### 3. Start the Application
+
+Create local network connecting containers:
+
+```bash
+docker network create app-network
+```
 
 Run the startup script to initialize all services:
 

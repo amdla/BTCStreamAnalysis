@@ -1,0 +1,95 @@
+\babel@toc {polish}{}\relax 
+\babel@toc {polish}{}\relax 
+\thispagestyle {empty}
+\contentsline {chapter}{\numberline {1}Wstęp}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Wprowadzenie}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Cel pracy}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Plan pracy}{2}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Przetwarzanie danych strumieniowych}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Charakterystyka danych strumieniowych}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Modele przetwarzania danych}{5}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Przetwarzanie wsadowe}{6}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Przetwarzanie strumieniowe}{6}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Architektura Lambda i Kappa}{6}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Semantyka dostarczania komunikatów}{7}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}At-most-once (co najwyżej raz)}{7}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}At-least-once (co najmniej raz)}{7}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Exactly-once (dokładnie raz)}{7}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Okna czasowe w przetwarzaniu strumieniowym}{8}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Okna stałe (fixed windows)}{8}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Okna przesuwne (sliding windows)}{8}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Okna sesyjne (session windows)}{8}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Problemy i wyzwania}{9}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Zarządzanie czasem zdarzeń}{9}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Zarządzanie stanem}{9}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Backpressure i kontrola przepływu}{9}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Skalowalność i partycjonowanie}{10}{subsection.2.5.4}%
+\contentsline {section}{\numberline {2.6}Architektura sterowana zdarzeniami}{10}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Podsumowanie}{11}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Analiza wymagań}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Założenia projektu}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Wymagania funkcjonalne}{14}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Pobieranie danych}{14}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Przechowywanie danych}{15}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Przetwarzanie danych}{15}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Udostępnianie danych i powiadamianie}{15}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Wymagania niefunkcjonalne}{16}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Wydajność i skalowalność}{16}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Niezawodność i odporność na awarie}{17}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Istniejące rozwiązania}{17}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Binance-Data-Collector-and-Visualization}{17}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}binance\_ticker\_rust}{18}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Binance Datatool (BHDS)}{18}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}binance-websocket}{18}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Wnioski z analizy porównawczej}{19}{subsection.3.4.5}%
+\contentsline {chapter}{\numberline {4}Projekt systemu}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Serwer strumieniowy (Data Fetcher)}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Broker wiadomości (NATS JetStream)}{22}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Warstwa gorąca (MongoDB)}{22}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Moduły ETL (Extract, Transform, Load)}{22}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Warstwa zimna (MinIO Object Storage)}{23}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Interfejs GraphQL}{23}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Serwis alertów (Telegram Bot)}{23}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Analityka strumieniowa i historyczna}{24}{section.4.8}%
+\contentsline {chapter}{\numberline {5}Implementacja}{25}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Wykorzystane technologie}{25}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Język programowania Go}{25}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Docker i Docker Compose}{25}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}NATS JetStream}{26}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}MongoDB}{26}{subsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.1.5}MinIO}{28}{subsection.5.1.5}%
+\contentsline {subsection}{\numberline {5.1.6}GraphQL i gqlgen}{29}{subsection.5.1.6}%
+\contentsline {subsection}{\numberline {5.1.7}Modele danych w języku Go}{30}{subsection.5.1.7}%
+\contentsline {subsection}{\numberline {5.1.8}Format Parquet}{30}{subsection.5.1.8}%
+\contentsline {subsection}{\numberline {5.1.9}Viper}{31}{subsection.5.1.9}%
+\contentsline {subsection}{\numberline {5.1.10}Jupyter Notebook i Python}{31}{subsection.5.1.10}%
+\contentsline {section}{\numberline {5.2}Problemy i wyzwania}{31}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Złożoność architektury mikrousługowej}{31}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Debugowanie i śledzenie rozproszone}{31}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Przetwarzanie sterowane zdarzeniami}{32}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Zarządzanie wieloma kontenerami}{32}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Jednoczesny dostęp do danych historycznych i bieżących}{32}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}Projektowanie elastycznego API}{32}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}Optymalizacja procesu archiwizacji}{33}{subsection.5.2.7}%
+\contentsline {section}{\numberline {5.3}Możliwości dalszego rozwoju}{33}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Centralizacja logów}{33}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Metryki i dashboardy (Prometheus/Grafana)}{33}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Śledzenie rozproszone (distributed tracing)}{33}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Alerty operacyjne i powiadomienia o stanie systemu}{34}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}Rozszerzenie API: dostęp do danych z MinIO oraz federacja GraphQL}{34}{subsection.5.3.5}%
+\contentsline {subsection}{\numberline {5.3.6}Bardziej zaawansowany moduł analityczny}{34}{subsection.5.3.6}%
+\contentsline {subsection}{\numberline {5.3.7}Modele predykcyjne i pipeline uczenia maszynowego}{34}{subsection.5.3.7}%
+\contentsline {subsection}{\numberline {5.3.8}Dalsza optymalizacja i skalowanie do wszystkich symboli}{34}{subsection.5.3.8}%
+\contentsline {chapter}{\numberline {6}Weryfikacja rozwiązania}{37}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Test T1: Odbiór danych z Binance WebSocket}{38}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Test T2: Publikowanie zdarzeń do NATS JetStream}{39}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Test T3: Subskrybowanie zdarzeń przez moduł MongoDB}{40}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Test T4: Subskrybowanie zdarzeń przez moduł Telegram Bot}{41}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Test T5: Wysyłanie powiadomienia Telegram -- filtr spełniony}{42}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Test T6: Brak powiadomienia Telegram -- filtr niespełniony}{43}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Test T7: Zapytanie GraphQL z filtrami zwracającymi wyniki}{44}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Test T8: Zapytanie GraphQL z filtrami niezwracającymi wyników}{45}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Test T9: Proces ETL i mechanizm tiered storage}{46}{section.6.9}%
+\contentsline {chapter}{\numberline {7}Podsumowanie}{49}{chapter.7}%
+\contentsline {chapter}{Bibliografia}{50}{section*.18}%
+\contentsline {chapter}{Załączniki}{55}{section*.20}%

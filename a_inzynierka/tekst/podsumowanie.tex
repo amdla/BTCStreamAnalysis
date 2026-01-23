@@ -1,0 +1,69 @@
+\chapter{Podsumowanie}
+\label{ch:podsumowanie}
+
+Celem niniejszej pracy było zaprojektowanie i~implementacja kompletnego systemu do przetwarzania i~archiwizacji
+strumieniowych danych finansowych z~rynku kryptowalut w~środowisku lokalnym (\textit{on-premises}).
+Założenia te zostały zrealizowane w~pełni --- powstał działający system oparty na architekturze mikrousługowej,
+który integruje wszystkie zaplanowane komponenty i~spełnia postawione wymagania funkcjonalne oraz niefunkcjonalne.
+
+W~ramach pracy zaimplementowano niezawodny serwer strumieniowy utrzymujący połączenia z~WebSocket giełdy Binance,
+automatycznie wznawiający połączenie w~przypadku awarii.
+Zbudowano kanał dystrybucyjny oparty na~NATS JetStream, zapewniający buforowanie zdarzeń oraz gwarantowane
+dostarczenie komunikatów nawet w~przypadku chwilowej niedostępności usług konsumenckich.
+Utworzono procesy ETL dzielące dane na~zbiory surowe (\textit{raw}) i~oczyszczone (\textit{curated}) oraz wzbogacające
+je o~metadane analityczne.
+Wdrożono mechanizm pamięci warstwowej (\textit{tiered storage}) automatycznie przenoszący dane historyczne
+z~operacyjnej bazy MongoDB do~archiwalnego magazynu obiektowego MinIO, optymalizując zasoby warstwy operacyjnej
+przy~zachowaniu dostępności danych historycznych.
+Zaimplementowano interfejs GraphQL umożliwiający wykonywanie elastycznych zapytań o dane bieżące z~zastosowaniem filtrów
+i~projekcji pól.
+Zrealizowano bota platformy Telegram realizującego funkcję powiadamiania użytkowników o~zdarzeniach rynkowych
+w~czasie rzeczywistym.
+
+System został pomyślnie uruchomiony i~zweryfikowany pod kątem poprawności działania poszczególnych komponentów oraz
+przepływu danych między nimi.
+Testy manualne opisane w~rozdziale~\ref{ch:testy} potwierdziły prawidłowe funkcjonowanie wszystkich modułów --- od
+pobierania danych przez przetwarzanie i~archiwizację, aż po udostępnianie przez API oraz wysyłanie powiadomień.
+Weryfikacja mechanizmu migracji danych między warstwami wykazała poprawne przenoszenie rekordów z~MongoDB do MinIO
+bez utraty informacji.
+
+Projekt udowodnił, że możliwe jest zbudowanie kompletnego, autonomicznego systemu przetwarzania danych rynkowych
+w~środowisku lokalnym z~wykorzystaniem otwartych technologii.
+Architektura mikrousługowa sterowana zdarzeniami (\textit{Event-Driven Architecture}) okazała się odpowiednia dla
+tego typu zastosowań, zapewniając luźne powiązanie między komponentami, odporność na awarie oraz możliwość
+niezależnego skalowania i~rozwoju poszczególnych modułów.
+
+System można rozwijać w~wielu kierunkach, przede wszystkim poprzez centralizację logów z~zastosowaniem
+identyfikatorów korelacji oraz wspólnego backendu typu Loki czy~ELK, co~ułatwiłoby diagnozę problemów w~systemach
+rozproszonych.
+Istotnym uzupełnieniem byłaby ekspozycja metryk technicznych i~domenowych do~Prometheus oraz budowa dashboardów
+w~Grafanie, umożliwiających monitorowanie opóźnień, wydajności procesów ETL oraz stanu konsumentów JetStream.
+Wdrożenie śledzenia rozproszonego z~wykorzystaniem OpenTelemetry pozwoliłoby na~wizualizację pełnej ścieżki
+przetwarzania zdarzeń między mikroserwisami.
+W~warstwie aplikacyjnej warto rozważyć rozszerzenie API GraphQL o~dostęp do~danych historycznych z~MinIO poprzez
+mechanizm federacji oraz wzbogacenie modułu analitycznego o~bardziej zaawansowane metryki, takie jak~zmienność
+w~oknach kroczących, wykrywanie anomalii czy~budowę modeli predykcyjnych w~ramach potoku uczenia maszynowego.
+Dodatkowo, wprowadzenie alertów operacyjnych informujących o~problemach działania systemu oraz~skalowanie do~pełnej
+listy symboli giełdowych wymagałoby mechanizmów fragmentacji i~lepszego zarządzania backpressure.
+Zaprezentowana architektura stanowi solidny fundament do realizacji tych rozszerzeń.
+
+Implementacja systemu pozwoliła na~praktyczną weryfikację wybranych technologii.
+Język Go~okazał się niezwykle efektywnym wyborem do~budowy usług sieciowych i~przetwarzania strumieniowego, oferując
+niskie zużycie zasobów przy~wysokiej wydajności.
+Jasna składnia języka oraz wbudowana obsługa kontekstów i~anulowania operacji znacząco ułatwiły implementację
+niezawodnych komponentów, takich jak serwer strumieniowy czy~konsumenci JetStream.
+Baza MongoDB sprawdziła się jako warstwa operacyjna, zapewniając prostotę w~modelowaniu dokumentów oraz elastyczność
+schematów, co~jest szczególnie istotne w~kontekście danych o~zmiennej strukturze.
+W~porównaniu z~relacyjnymi bazami danych, MongoDB wymagała mniejszego nakładu na~konfigurację i~zarządzanie migracjami,
+co~przyspieszyło iteracje rozwojowe.
+Istnotnym ograniczeniem okazała się sytuacja wokół MinIO --- w~trakcie realizacji projektu producent zaprzestał
+rozwijania wersji open~source na~rzecz w~pełni komercyjnego rozwiązania enterprise.
+W~konsekwencji wykorzystana wersja nie~otrzymuje już aktualizacji, wsparcia technicznego, a~oficjalna dokumentacja
+została usunięta, co~może stanowić wyzwanie w~kontekście długoterminowego utrzymania systemu.
+Pomimo tego baza MinIO spełniła swoją rolę w~ramach demonstratora, lecz~w~środowisku produkcyjnym zasadne byłoby rozważenie
+alternatyw, takich jak SeaweedFS czy~bezpośrednie wykorzystanie rozwiązań chmurowych kompatybilnych z~API S3.
+
+Podsumowując, wszystkie cele szczegółowe określone we wstępie zostały osiągnięte.
+System działa zgodnie z~założeniami, spełnia wymagania funkcjonalne i~niefunkcjonalne, a~przeprowadzone testy
+potwierdzają jego poprawność i~stabilność.
+

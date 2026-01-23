@@ -1,0 +1,145 @@
+% !TEX program = pdflatex
+% !TeX encoding = utf8
+% !TeX spellcheck = pl-PL
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Wybierz rodzaj pracy dyplomowej oraz wydział
+% Pick thesis type and faculty
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[thesis=inz,faculty=ee]{EE-dyplom}
+
+% thesis=[inz|mgr|bsc|msc]
+%  * inz - praca inżynierska
+%  * mgr - praca magisterska
+%  * bsc - bachelor thesis
+%  * msc - master thesis
+
+% Skróty nazw wydziałów zgodne z domenami internetowymi
+% Abbreviations of Faculties according to Internet subdomains
+% faculty=[
+%	arch,
+%	gik,
+%	ee,
+%	wip
+%	]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Konfiguracja - do personalizacji
+% Configuration - to be personalized
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\instytut{Instytut Sterowania i Elektroniki Przemysłowej}
+\kierunek{Informatyka Stosowana}
+\specjalnosc{Inżynieria danych i multimedia}
+\title{System do przetwarzania i archiwizacji strumieniowych danych finansowych w środowisku lokalnym}
+\engtitle{A system for processing and archiving real-time financial data in an on-premises environment}
+\album{325483}
+\author{Maciej Karabin}
+\promotor{mgr inż. Krzysztof Marek}
+\date{2026}
+\longdate{2026-01-01}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Streszczenie pracy i abstract.
+% In case of thesis in English swap the order - English version goes first.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\streszczeniepracy{
+    Praca przedstawia projekt oraz implementację systemu do przetwarzania i archiwizacji strumieniowych danych
+    finansowych z rynku kryptowalut w~środowisku lokalnym.
+    Głównym celem jest zapewnienie wiarygodnego i kompletnego łańcucha przetwarzania danych, od odbioru, przez walidację
+    i~wzbogacanie, aż po udostępnianie i archiwizację w trybie ciągłym.
+
+    W ramach pracy zrealizowano architekturę opartą na mikrousługach, która integruje technologie takie jak Go, Docker,
+    NATS JetStream, MongoDB oraz MinIO\@.
+    System pobiera dane w czasie rzeczywistym z giełdy Binance za pomocą dedykowanego serwera strumieniowego.
+    Następnie komunikaty są dystrybuowane przez brokera NATS JetStream do modułów ETL, które odpowiadają za ich
+    transformację, oczyszczanie oraz wzbogacanie o metadane analityczne.
+    Kluczowym elementem systemu jest mechanizm pamięci warstwowej (\textit{tiered storage}), który automatycznie
+    przenosi dane historyczne z operacyjnej bazy danych MongoDB do archiwalnego magazynu obiektowego MinIO,
+    optymalizując koszty i wydajność.
+    Dostęp do surowych danych zapewnia interfejs GraphQL, a zintegrowany z platformą Telegram bot umożliwia
+    wysyłanie powiadomień o zdarzeniach rynkowych.
+
+    Struktura pracy obejmuje analizę istniejących rozwiązań i wymagań systemowych w rozdziale drugim.
+    Rozdział trzeci szczegółowo opisuje zaprojektowaną architekturę systemu i przepływ danych między komponentami.
+    Implementacja poszczególnych komponentów oraz wykorzystane technologie zostały przedstawione w rozdziale czwartym.
+    Rozdział piąty wskazuje możliwe kierunki dalszego rozwoju systemu.
+    Rozdział szósty dokumentuje przeprowadzone testy manualne weryfikujące poprawność działania systemu.
+    Pracę kończy podsumowanie zawierające wnioski z realizacji projektu.
+} % koniec streszczenia
+
+\slowakluczowe{przetwarzanie strumieniowe, kryptowaluty, object storage, ETL, pamięć warstwowa, Go, NATS JetStream, EDA}
+
+\thesisabstract{
+    The thesis presents the design and implementation of a system for processing and archiving streaming financial data
+    from the cryptocurrency market in an on-premises environment.
+    The main objective is to ensure a reliable and complete data processing chain, from ingestion, through validation
+    and enrichment, to continuous delivery and archiving.
+
+    The project implements a microservices-based architecture that integrates technologies such as Go, Docker, NATS
+    JetStream, MongoDB, and MinIO\@.
+    The system fetches real-time data from the Binance exchange using a dedicated streaming server.
+    Subsequently, the NATS JetStream broker distributes messages to ETL modules, which are responsible for their
+    transformation, cleansing, and enrichment with analytical metadata.
+    A key element of the system is the tiered storage mechanism, which automatically moves historical data from the
+    operational MongoDB database to the archival MinIO object storage, optimizing costs and performance.
+    Access to raw data is provided by a GraphQL interface, and a Telegram bot integrated with the platform enables
+    sending notifications about market events.
+
+    The structure of the thesis includes an analysis of existing solutions and system requirements in the second chapter.
+    The third chapter describes the designed system architecture and data flow between components in detail.
+    The implementation of individual components and the technologies used are presented in the fourth chapter.
+    The fifth chapter indicates possible directions for further development of the system.
+    The sixth chapter documents the manual tests conducted to verify the correct operation of the system.
+    The thesis concludes with a summary that includes conclusions from the project.
+} % end of abstract
+
+\thesiskeywords{stream processing, cryptocurrency, object storage, ETL, tiered storage, Go, NATS JetStream, Event Driven Architecture}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pakiet float - umożliwia użycie [H] do wymuszenia pozycji obrazków
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{float}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tu zaczyna się dokument
+% Here is the beginning of the document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+    % Strony nagłówkowe - musi być
+    % Headers - must exist
+    \frontpages
+
+    % Tekst pracy - osobne pliki do edycji
+    % Thesis text - separate files for edition
+    \setcounter{page}{1}
+
+    \input{tekst/wstep}
+    \input{tekst/przetwarzanie_danych_wstep}
+    \input{tekst/analiza}
+    \input{tekst/projekt}
+    \input{tekst/implementacja}
+    \input{tekst/rozwoj}
+    \input{tekst/testy}
+    \input{tekst/podsumowanie}
+
+    % Bibliografia - musi być, jest w pliku EE-dyplom.bib
+    % Bibliography - must exist, is in the file EE-dyplom.bib
+    \bibliografia
+
+    % Załącznik - link do repozytorium
+    % Appendix - repository link
+    \cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Załączniki}
+
+
+    \chapter*{Załączniki}
+    \label{ch:zalacznik}
+
+    Kod źródłowy systemu jest dostępny w~publicznym repozytorium GitHub pod adresem:
+
+    \vspace{1em}
+    \noindent\url{https://github.com/amdla/BTCStreamAnalysis/}
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,2690 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.12.8)  23 JAN 2026 19:06
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**EE-dyplom.tex
+(./EE-dyplom.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21> (./EE-dyplom.cls
+Document Class: EE-dyplom 2026/03/03 Praca dyplomowa na Politechnice Warszawski
+ej
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks17
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen139
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count194
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count195
+\leftroot@=\count196
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count197
+\DOTSCASE@=\count198
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count199
+\c@MaxMatrixCols=\count266
+\dotsspace@=\muskip16
+\c@parentequation=\count267
+\dspbrk@lvl=\count268
+\tag@help=\toks19
+\row@=\count269
+\column@=\count270
+\maxfields@=\count271
+\andhelp@=\toks20
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks21
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks23
+\thm@bodyfont=\toks24
+\thm@headfont=\toks25
+\thm@notefont=\toks26
+\thm@headpunct=\toks27
+\thm@preskip=\skip52
+\thm@postskip=\skip53
+\thm@headsep=\skip54
+\dth@everypar=\toks28
+)
+(/usr/share/texlive/texmf-dist/tex/latex/esint/esint.sty
+Package: esint 
+\symlargesymbolsA=\mathgroup6
+)
+(/usr/share/texlive/texmf-dist/tex/latex/sourcesanspro/sourcesanspro.sty
+Package: sourcesanspro 2018/05/19 v2.7 Adobe's Source Sans Pro typeface
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks29
+\XKV@tempa@toks=\toks30
+)
+\XKV@depth=\count272
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/ly1/ly1enc.def
+File: ly1enc.def 2009/07/22 v0.7 TeX 'n ANSI encoding (DPC/KB)
+Now handling font encoding LY1 ...
+... processing UTF-8 mapping file for font encoding LY1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ly1enc.dfu
+File: ly1enc.dfu 2021/06/21 v1.2n UTF-8 support
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+0237 (decimal 567)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+FB00 (decimal 64256)
+   defining Unicode char U+FB01 (decimal 64257)
+   defining Unicode char U+FB02 (decimal 64258)
+   defining Unicode char U+FB03 (decimal 64259)
+   defining Unicode char U+FB04 (decimal 64260)
+   defining Unicode char U+FB05 (decimal 64261)
+   defining Unicode char U+FB06 (decimal 64262)
+))))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+SourceSansPro-TLF on
+ input line 112.
+
+(/usr/share/texlive/texmf-dist/tex/latex/sourcesanspro/T1SourceSansPro-TLF.fd
+File: T1SourceSansPro-TLF.fd 2020/01/19 (autoinst) Font definitions for T1/Sour
+ceSansPro-TLF.
+)
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 112.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
+(Font)              scaled to size 10.95pt on input line 112.
+) (/usr/share/texlive/texmf-dist/tex/latex/polski/polski.sty
+Package: polski 2021/08/25 v1.3.6 Polish language package
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2022/01/26 3.70 The Babel package
+\babel@savecnt=\count273
+\U@D=\dimen148
+\l@unhyphenated=\language36
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count274
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'british' set to \l@english
+(babel)             (\language0). Reported on input line 82.
+Package babel Info: Hyphen rules for 'UKenglish' set to \l@english
+(babel)             (\language0). Reported on input line 83.
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@english
+(babel)             (\language0). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@english
+(babel)             (\language0). Reported on input line 108.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-polish/polish.ldf
+Language: polish 2005/03/31 v1.2l Polish support from the babel system
+Package babel Info: Making " an active character on input line 83.
+\pl@left=\dimen149
+\pl@down=\dimen150
+\pl@right=\dimen151
+\pl@temp=\dimen152
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks31
+\inpenc@posthook=\toks32
+)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00D7 (decimal 215)
+
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count275
+\Gm@cntv=\count276
+\c@Gm@tempcnt=\count277
+\Gm@bindingoffset=\dimen153
+\Gm@wd@mp=\dimen154
+\Gm@odd@mp=\dimen155
+\Gm@even@mp=\dimen156
+\Gm@layoutwidth=\dimen157
+\Gm@layoutheight=\dimen158
+\Gm@layouthoffset=\dimen159
+\Gm@layoutvoffset=\dimen160
+\Gm@dimlist=\toks33
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip55
+\f@nch@O@elh=\skip56
+\f@nch@O@erh=\skip57
+\f@nch@O@olh=\skip58
+\f@nch@O@orh=\skip59
+\f@nch@O@elf=\skip60
+\f@nch@O@erf=\skip61
+\f@nch@O@olf=\skip62
+\f@nch@O@orf=\skip63
+)
+(/usr/share/texlive/texmf-dist/tex/latex/emptypage/emptypage.sty
+Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty 
+pages
+)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2022/02/02 v3.17 programmable bibliographies (PK/MW)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count278
+)
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count279
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count280
+\c@listtotal=\count281
+\c@listcount=\count282
+\c@liststart=\count283
+\c@liststop=\count284
+\c@citecount=\count285
+\c@citetotal=\count286
+\c@multicitecount=\count287
+\c@multicitetotal=\count288
+\c@instcount=\count289
+\c@maxnames=\count290
+\c@minnames=\count291
+\c@maxitems=\count292
+\c@minitems=\count293
+\c@citecounter=\count294
+\c@maxcitecounter=\count295
+\c@savedcitecounter=\count296
+\c@uniquelist=\count297
+\c@uniquename=\count298
+\c@refsection=\count299
+\c@refsegment=\count300
+\c@maxextratitle=\count301
+\c@maxextratitleyear=\count302
+\c@maxextraname=\count303
+\c@maxextradate=\count304
+\c@maxextraalpha=\count305
+\c@abbrvpenalty=\count306
+\c@highnamepenalty=\count307
+\c@lownamepenalty=\count308
+\c@maxparens=\count309
+\c@parenlevel=\count310
+\blx@tempcnta=\count311
+\blx@tempcntb=\count312
+\blx@tempcntc=\count313
+\c@blx@maxsection=\count314
+\c@blx@maxsegment@0=\count315
+\blx@notetype=\count316
+\blx@parenlevel@text=\count317
+\blx@parenlevel@foot=\count318
+\c@blx@sectionciteorder@0=\count319
+\blx@entrysetcounter=\count320
+\blx@biblioinstance=\count321
+\labelnumberwidth=\skip64
+\labelalphawidth=\skip65
+\biblabelsep=\skip66
+\bibitemsep=\skip67
+\bibnamesep=\skip68
+\bibinitsep=\skip69
+\bibparsep=\skip70
+\bibhang=\skip71
+\blx@bcfin=\read3
+\blx@bcfout=\write3
+\blx@langwohyphens=\language37
+\c@mincomprange=\count322
+\c@maxcomprange=\count323
+\c@mincompwidth=\count324
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'ieee.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count325
+\c@savedafterword=\count326
+\c@annotator=\count327
+\c@savedannotator=\count328
+\c@author=\count329
+\c@savedauthor=\count330
+\c@bookauthor=\count331
+\c@savedbookauthor=\count332
+\c@commentator=\count333
+\c@savedcommentator=\count334
+\c@editor=\count335
+\c@savededitor=\count336
+\c@editora=\count337
+\c@savededitora=\count338
+\c@editorb=\count339
+\c@savededitorb=\count340
+\c@editorc=\count341
+\c@savededitorc=\count342
+\c@foreword=\count343
+\c@savedforeword=\count344
+\c@holder=\count345
+\c@savedholder=\count346
+\c@introduction=\count347
+\c@savedintroduction=\count348
+\c@namea=\count349
+\c@savednamea=\count350
+\c@nameb=\count351
+\c@savednameb=\count352
+\c@namec=\count353
+\c@savednamec=\count354
+\c@translator=\count355
+\c@savedtranslator=\count356
+\c@shortauthor=\count357
+\c@savedshortauthor=\count358
+\c@shorteditor=\count359
+\c@savedshorteditor=\count360
+\c@labelname=\count361
+\c@savedlabelname=\count362
+\c@institution=\count363
+\c@savedinstitution=\count364
+\c@lista=\count365
+\c@savedlista=\count366
+\c@listb=\count367
+\c@savedlistb=\count368
+\c@listc=\count369
+\c@savedlistc=\count370
+\c@listd=\count371
+\c@savedlistd=\count372
+\c@liste=\count373
+\c@savedliste=\count374
+\c@listf=\count375
+\c@savedlistf=\count376
+\c@location=\count377
+\c@savedlocation=\count378
+\c@organization=\count379
+\c@savedorganization=\count380
+\c@origlocation=\count381
+\c@savedoriglocation=\count382
+\c@origpublisher=\count383
+\c@savedorigpublisher=\count384
+\c@publisher=\count385
+\c@savedpublisher=\count386
+\c@language=\count387
+\c@savedlanguage=\count388
+\c@origlanguage=\count389
+\c@savedoriglanguage=\count390
+\c@pageref=\count391
+\c@savedpageref=\count392
+\shorthandwidth=\skip72
+\shortjournalwidth=\skip73
+\shortserieswidth=\skip74
+\shorttitlewidth=\skip75
+\shortauthorwidth=\skip76
+\shorteditorwidth=\skip77
+\locallabelnumberwidth=\skip78
+\locallabelalphawidth=\skip79
+\localshorthandwidth=\skip80
+\localshortjournalwidth=\skip81
+\localshortserieswidth=\skip82
+\localshorttitlewidth=\skip83
+\localshortauthorwidth=\skip84
+\localshorteditorwidth=\skip85
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+\c@textcitecount=\count393
+\c@textcitetotal=\count394
+\c@textcitemaxnames=\count395
+\c@biburlbigbreakpenalty=\count396
+\c@biburlbreakpenalty=\count397
+\c@biburlnumpenalty=\count398
+\c@biburlucpenalty=\count399
+\c@biburllcpenalty=\count400
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count401
+)
+Package biblatex Info: Trying to load bibliography style 'ieee'...
+Package biblatex Info: ... file 'ieee.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex-ieee/ieee.bbx
+File: ieee.bbx 2021/12/06 v1.3f biblatex bibliography style
+Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx
+File: numeric-comp.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count402
+\c@bbx:relatedtotal=\count403
+))))
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
+File: numeric-comp.cbx 2022/02/02 v3.17 biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count404
+\c@cbx@tempcntb=\count405
+\c@cbx@tempcntc=\count406
+\c@cbx@tempcntd=\count407
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count408
+\l__pdf_internal_box=\box52
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2022-01-21 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2022/02/02 v3.17 expl3 case changing code for biblatex
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
+Package: chngcntr 2018/04/09 v1.1a change counter resetting
+Package chngcntr Info: \counterwithout already defined.
+(chngcntr)             Quitting chngcntr on input line 21.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen161
+\captionmargin@=\dimen162
+\captionwidth=\dimen163
+\caption@tempdima=\dimen164
+\caption@indent=\dimen165
+\caption@parindent=\dimen166
+\caption@hangindent=\dimen167
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count409
+\c@continuedfloat=\count410
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+\c@subfigure=\count411
+\c@subtable=\count412
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen168
+\Gin@req@width=\dimen169
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip86
+\multirow@cntb=\count413
+\multirow@dima=\skip87
+\bigstrutjot=\dimen170
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
+\c@tracingmulticols=\count414
+\mult@box=\box53
+\multicol@leftmargin=\dimen171
+\c@unbalance=\count415
+\c@collectmore=\count416
+\doublecol@number=\count417
+\multicoltolerance=\count418
+\multicolpretolerance=\count419
+\full@width=\dimen172
+\page@free=\dimen173
+\premulticols=\dimen174
+\postmulticols=\dimen175
+\multicolsep=\skip88
+\multicolbaselineskip=\skip89
+\partial@page=\box54
+\last@line=\box55
+\maxbalancingoverflow=\dimen176
+\mult@rightbox=\box56
+\mult@grightbox=\box57
+\mult@firstbox=\box58
+\mult@gfirstbox=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\c@minrows=\count420
+\c@columnbadness=\count421
+\c@finalcolumnbadness=\count422
+\last@try=\dimen177
+\multicolovershoot=\dimen178
+\multicolundershoot=\dimen179
+\mult@nat@firstbox=\box96
+\colbreak@box=\box97
+\mc@col@check@num=\count423
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip90
+\LTright=\skip91
+\LTpre=\skip92
+\LTpost=\skip93
+\LTchunksize=\count424
+\LTcapwidth=\dimen180
+\LT@head=\box98
+\LT@firsthead=\box99
+\LT@foot=\box100
+\LT@lastfoot=\box101
+\LT@gbox=\box102
+\LT@cols=\count425
+\LT@rows=\count426
+\c@LT@tables=\count427
+\c@LT@chunks=\count428
+\LT@p@ftn=\toks34
+)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen181
+\ar@mcellbox=\box103
+\extrarowheight=\dimen182
+\NC@list=\toks35
+\extratabsurround=\skip94
+\backup@length=\skip95
+\ar@cellbox=\box104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+)
+\everycr=\toks36
+\minrowclearance=\skip96
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Package option `usenames' ignored on input line 218.
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+LaTeX Info: Redefining \color on input line 711.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen183
+\Hy@linkcounter=\count429
+\Hy@pagecounter=\count430
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count431
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count432
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen184
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count433
+\Field@Width=\dimen185
+\Fld@charsize=\dimen186
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count434
+\c@Item=\count435
+\c@Hfootnote=\count436
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count437
+\c@bookmark@seq@number=\count438
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip97
+)
+Package hyperref Info: Option `unicode' set `true' on input line 411.
+Package hyperref Info: Option `pdftoolbar' set `true' on input line 411.
+Package hyperref Info: Option `pdfmenubar' set `true' on input line 411.
+Package hyperref Info: Option `pdffitwindow' set `false' on input line 411.
+Package hyperref Info: Option `pdfnewwindow' set `true' on input line 411.
+Package hyperref Info: Option `colorlinks' set `true' on input line 411.
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count439
+\lst@gtempboxa=\box105
+\lst@token=\toks37
+\lst@length=\count440
+\lst@currlwidth=\dimen187
+\lst@column=\count441
+\lst@pos=\count442
+\lst@lostspace=\dimen188
+\lst@width=\dimen189
+\lst@newlines=\count443
+\lst@lineno=\count444
+\lst@maxwidth=\dimen190
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count445
+\lst@skipnumbers=\count446
+\lst@framebox=\box106
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/menukeys/menukeys.sty
+Package: menukeys 2020/12/19 v1.6.1 -- A package to format menus, paths and sho
+rtcuts
+
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count447
+\decimalpart=\count448
+)
+Package: xstring 2021/07/21 v1.84 String manipulations (CT)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks38
+\pgfutil@tempdima=\dimen191
+\pgfutil@tempdimb=\dimen192
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box107
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks39
+\pgfkeys@temptoks=\toks40
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks41
+))
+\pgf@x=\dimen193
+\pgf@y=\dimen194
+\pgf@xa=\dimen195
+\pgf@ya=\dimen196
+\pgf@xb=\dimen197
+\pgf@yb=\dimen198
+\pgf@xc=\dimen199
+\pgf@yc=\dimen256
+\pgf@xd=\dimen257
+\pgf@yd=\dimen258
+\w@pgf@writea=\write4
+\r@pgf@reada=\read4
+\c@pgf@counta=\count449
+\c@pgf@countb=\count450
+\c@pgf@countc=\count451
+\c@pgf@countd=\count452
+\t@pgf@toka=\toks42
+\t@pgf@tokb=\toks43
+\t@pgf@tokc=\toks44
+\pgf@sys@id@count=\count453
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count454
+\pgfsyssoftpath@bigbuffer@items=\count455
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen259
+\pgfmath@count=\count456
+\pgfmath@box=\box108
+\pgfmath@toks=\toks45
+\pgfmath@stack@operand=\toks46
+\pgfmath@stack@operation=\toks47
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count457
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen260
+\pgf@picmaxx=\dimen261
+\pgf@picminy=\dimen262
+\pgf@picmaxy=\dimen263
+\pgf@pathminx=\dimen264
+\pgf@pathmaxx=\dimen265
+\pgf@pathminy=\dimen266
+\pgf@pathmaxy=\dimen267
+\pgf@xx=\dimen268
+\pgf@xy=\dimen269
+\pgf@yx=\dimen270
+\pgf@yy=\dimen271
+\pgf@zx=\dimen272
+\pgf@zy=\dimen273
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen274
+\pgf@path@lasty=\dimen275
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen276
+\pgf@shorten@start@additional=\dimen277
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box109
+\pgf@hbox=\box110
+\pgf@layerbox@main=\box111
+\pgf@picture@serial@count=\count458
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen278
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen279
+\pgf@pt@y=\dimen280
+\pgf@pt@temp=\dimen281
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen282
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen283
+\pgf@sys@shading@range@num=\count459
+\pgf@shadingcount=\count460
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box112
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box113
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen284
+\pgf@nodesepend=\dimen285
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen286
+\pgffor@skip=\dimen287
+\pgffor@stack=\toks48
+\pgffor@toks=\toks49
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count461
+\pgfplotmarksize=\dimen288
+)
+\tikz@lastx=\dimen289
+\tikz@lasty=\dimen290
+\tikz@lastxsaved=\dimen291
+\tikz@lastysaved=\dimen292
+\tikz@lastmovetox=\dimen293
+\tikz@lastmovetoy=\dimen294
+\tikzleveldistance=\dimen295
+\tikzsiblingdistance=\dimen296
+\tikz@figbox=\box114
+\tikz@figbox@bg=\box115
+\tikz@tempbox=\box116
+\tikz@tempbox@bg=\box117
+\tikztreelevel=\count462
+\tikznumberofchildren=\count463
+\tikznumberofcurrentchild=\count464
+\tikz@fig@count=\count465
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count466
+\pgfmatrixcurrentcolumn=\count467
+\pgf@matrix@numberofcolumns=\count468
+)
+\tikz@expandcount=\count469
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code
+.tex
+File: pgflibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box118
+)
+\tc@llx=\dimen297
+\tc@lly=\dimen298
+\tc@urx=\dimen299
+\tc@ury=\dimen300
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen301
+\adjbox@Height=\dimen302
+\adjbox@Depth=\dimen303
+\adjbox@Totalheight=\dimen304
+\adjbox@pwidth=\dimen305
+\adjbox@pheight=\dimen306
+\adjbox@pdepth=\dimen307
+\adjbox@ptotalheight=\dimen308
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count470
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box119
+\sift@deathcycles=\count471
+\@vwid@loff=\dimen309
+\@vwid@roff=\dimen310
+))
+(/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\l__twmk_indris_int=\count472
+\c@tw@hyphen@char@num=\count473
+)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip98
+\enit@outerparindent=\dimen311
+\enit@toks=\toks50
+\enit@inbox=\box120
+\enit@count@id=\count474
+\enitdp@description=\count475
+)
+\docparskip=\skip99
+\c@easyappendix=\count476
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count477
+\float@exts=\toks51
+\float@box=\box121
+\@float@everytoks=\toks52
+\@floatcapt=\box122
+)
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count478
+\@quotereset=\count479
+(./EE-dyplom.aux)
+\openout1 = `EE-dyplom.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 107.
+LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 1
+07.
+ (/usr/share/texlive/texmf-dist/tex/latex/ly1/ly1ptm.fd
+File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
+)
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot twoside 
+* h-part:(L,W,R)=(85.35826pt, 455.24411pt, 56.9055pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=643.44633pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-1.1381pt
+* \headheight=16.0pt
+* \headsep=19.8738pt
+* \topskip=11.0pt
+* \footskip=27.46295pt
+* \marginparwidth=106.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package biblatex Info: Trying to load language 'polish'...
+Package biblatex Info: ... file 'polish.lbx' found.
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/polish.lbx
+File: polish.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `EE-dyplom.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'EE-dyplom.bbl' found.
+
+(./EE-dyplom.bbl)
+Package biblatex Info: Reference section=0 on input line 107.
+Package biblatex Info: Reference segment=0 on input line 107.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+)
+Package caption Info: End \AtBeginDocument code.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count480
+\scratchdimen=\dimen312
+\scratchbox=\box123
+\nofMPsegments=\count481
+\nofMParguments=\count482
+\everyMPshowfont=\toks53
+\MPscratchCnt=\count483
+\MPscratchDim=\dimen313
+\MPnumerator=\count484
+\makeMPintoPDFobject=\count485
+\everyMPtoPDFconversion=\toks54
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring ON on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count486
+)
+LaTeX Info: Redefining \ref on input line 107.
+LaTeX Info: Redefining \pageref on input line 107.
+LaTeX Info: Redefining \nameref on input line 107.
+
+(./EE-dyplom.out) (./EE-dyplom.out)
+\@outlinefile=\write5
+\openout5 = `EE-dyplom.out'.
+
+\c@lstlisting=\count487
+<gfx//HeadeePL.png, id=400, 2015.53pt x 320.19624pt>
+File: gfx//HeadeePL.png Graphic file (type png)
+<use gfx//HeadeePL.png>
+Package pdftex.def Info: gfx//HeadeePL.png  used on input line 110.
+(pdftex.def)             Requested size: 455.24411pt x 72.31953pt.
+<gfx//inzhead.png, id=402, 1392.20125pt x 303.1325pt>
+File: gfx//inzhead.png Graphic file (type png)
+<use gfx//inzhead.png>
+Package pdftex.def Info: gfx//inzhead.png  used on input line 110.
+(pdftex.def)             Requested size: 455.24411pt x 99.12282pt.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 110.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
+(Font)              scaled to size 12.0pt on input line 110.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 110.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
+(Font)              scaled to size 17.28pt on input line 110.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./gfx//HeadeePL.png> <./gf
+x//inzhead.png (PNG copy)>] [2
+
+]
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 110.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
+(Font)              scaled to size 10.95pt on input line 110.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 110.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
+(Font)              scaled to size 12.0pt on input line 110.
+
+Underfull \hbox (badness 2903) in paragraph at lines 110--110
+\T1/SourceSansPro-TLF/regular/n/10.95 za-pew-nie-nie wia-ry-god-nego i kom-plet
+-nego ªa«-cu-cha prze-twa-rza-nia da-nych, od od-bioru, przez
+ []
+
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/it' aliased to
+(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 110.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/it' will be
+(Font)              scaled to size 10.95pt on input line 110.
+
+Underfull \hbox (badness 3492) in paragraph at lines 110--110
+\T1/SourceSansPro-TLF/regular/n/10.95 ta-kie jak Go, Do-cker, NATS Jet-Stream, 
+Mon-goDB oraz Mi-nIO. Sys-tem po-biera dane w cza-sie
+ []
+
+
+Underfull \hbox (badness 2351) in paragraph at lines 110--110
+\T1/SourceSansPro-TLF/regular/n/10.95 rze-czy-wi-stym z gieªdy Bi-nance za po-m
+oc¡ de-dy-ko-wa-nego ser-wera stru-mie-nio-wego. Na-st¦p-nie
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 110--110
+\T1/SourceSansPro-TLF/regular/n/10.95 opty-ma-li-zu-j¡c koszty i wy-daj-no±¢. D
+o-st¦p do su-ro-wych da-nych za-pew-nia in-ter-fejs Gra-phQL, a
+ []
+
+
+Underfull \hbox (badness 3439) in paragraph at lines 110--110
+\T1/SourceSansPro-TLF/regular/n/10.95 dru-gim. Roz-dziaª trzeci szcze-gó-ªowo o
+pi-suje za-pro-jek-to-wan¡ ar-chi-tek-tur¦ sys-temu i prze-pªyw
+ []
+
+[3] [4
+
+]
+Underfull \hbox (badness 1838) in paragraph at lines 110--110
+\T1/SourceSansPro-TLF/regular/n/10.95 The thesis presents the design and implem
+entation of a system for processing and archiving
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 110--110
+\T1/SourceSansPro-TLF/regular/n/10.95 streaming financial data from the cryptoc
+urrency market in an on-premises environment. The
+ []
+
+
+Underfull \hbox (badness 2781) in paragraph at lines 110--110
+\T1/SourceSansPro-TLF/bold/n/10.95 Keywords:  \T1/SourceSansPro-TLF/regular/n/1
+0.95 stream pro-ces-sing, cryp-to-cur-rency, ob-ject sto-rage, ETL, tie-red sto
+-rage, Go, NATS
+ []
+
+[5
+
+] [6
+
+]
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 110.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
+(Font)              scaled to size 24.88pt on input line 110.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 110.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
+(Font)              scaled to size 24.88pt on input line 110.
+ (./EE-dyplom.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+esint on input line 5
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/esint/uesint.fd
+File: uesint.fd 
+) [7
+
+] [8])
+\tf@toc=\write6
+\openout6 = `EE-dyplom.toc'.
+
+ [9] [10
+
+]
+(./tekst/wstep.tex
+Rozdzia\l  1.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 1.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
+(Font)              scaled to size 20.74pt on input line 1.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 1.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
+(Font)              scaled to size 20.74pt on input line 1.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 6.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
+(Font)              scaled to size 14.4pt on input line 6.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 6.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
+(Font)              scaled to size 14.4pt on input line 6.
+
+Underfull \hbox (badness 2261) in paragraph at lines 8--13
+\T1/SourceSansPro-TLF/regular/n/10.95 Dynamiczny roz-wój rynku kryp-to-wa-lut o
+raz jego wy-soka zmien-no±¢ po-wo-duj¡, »e or-ga-ni-za-cje
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 8--13
+\T1/SourceSansPro-TLF/regular/n/10.95 dzienny wo-lu-men trans-ak-cyjny rz¦du dz
+ie-si¡-tek mi-liar-dów do-la-rów [[][]1[][]]. Jed-no-cze-±nie spe-cy-fika
+ []
+
+
+Underfull \hbox (badness 1360) in paragraph at lines 17--19
+[]\T1/SourceSansPro-TLF/regular/n/10.95 Projektowana ar-chi-tek-tura obej-muje 
+ser-wer stru-mie-niowy na-sªu-chu-j¡cy ka-na-ªów We-bSoc-ket
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+SourceSansPro-TLF o
+n input line 31.
+(/usr/share/texlive/texmf-dist/tex/latex/sourcesanspro/TS1SourceSansPro-TLF.fd
+File: TS1SourceSansPro-TLF.fd 2020/01/19 (autoinst) Font definitions for TS1/So
+urceSansPro-TLF.
+)
+LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/m/n' aliased to
+(Font)              `TS1/SourceSansPro-TLF/regular/n' on input line 31.
+LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/regular/n' will be
+(Font)              scaled to size 10.95pt on input line 31.
+
+Underfull \hbox (badness 1852) in paragraph at lines 27--33
+\T1/SourceSansPro-TLF/regular/n/10.95 pro-cesy \T1/SourceSansPro-TLF/regular/it
+/10.95 ETL \T1/SourceSansPro-TLF/regular/n/10.95 dzie-l¡ce dane na zbiory su-ro
+we i oczysz-czone oraz wzbo-ga-ca-j¡ce je o me-ta-dane
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.33 
+      [1
+
+]
+Underfull \hbox (badness 1472) in paragraph at lines 34--35
+[]\T1/SourceSansPro-TLF/regular/n/10.95 Realizacja zaªo»e« obejmuje przygotowan
+ie dokumentacji architektury, implementacj¦ usªug
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 41--44
+[]\T1/SourceSansPro-TLF/regular/n/10.95 W roz-dziale [][]3[][] przed-sta-wiono 
+ana-liz¦ wy-ma-ga« funk-cjo-nal-nych i nie-funk-cjo-nal-nych sys-temu,
+ []
+
+
+Underfull \hbox (badness 1014) in paragraph at lines 41--44
+\T1/SourceSansPro-TLF/regular/n/10.95 in-fra-struk-tury. Do-ko-nano prze-gl¡du 
+ist-nie-j¡-cych roz-wi¡-za« w ob-sza-rze prze-twa-rza-nia da-nych fi-
+ []
+
+
+Underfull \hbox (badness 3229) in paragraph at lines 45--49
+\T1/SourceSansPro-TLF/regular/n/10.95 oraz za-sady wer-sjo-no-wa-nia i re-ten-c
+ji da-nych. Roz-dziaª uwzgl¦d-nia tak»e sche-mat po-ª¡-cze-nia
+ []
+
+
+Underfull \hbox (badness 2310) in paragraph at lines 50--53
+\T1/SourceSansPro-TLF/regular/n/10.95 pro-blemy, ta-kie jak za-rz¡-dza-nie po-n
+ow-nymi po-ª¡-cze-niami po awa-riach, ob-sªuga back-pres-sure
+ []
+
+
+Underfull \hbox (badness 1325) in paragraph at lines 54--56
+[]\T1/SourceSansPro-TLF/regular/n/10.95 Rozdziaª [][]5.3[][] wskazuje mo»liwe k
+ierunki dalszego rozwoju systemu, obejmuj¡ce rozszerzenie
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.56 
+      [2]
+Underfull \hbox (badness 1112) in paragraph at lines 61--63
+\T1/SourceSansPro-TLF/regular/n/10.95 zaªo»onych celów oraz wskazano wnioski pª
+yn¡ce z realizacji systemu. Zidentyfikowano mocne
+ []
+
+) (./tekst/przetwarzanie_danych_wstep.texpdfTeX warning (ext4): destination wit
+h the same identifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Przetwarzanie danych strumieniowych} [3]pdfTeX warning (ext4): des
+tination with the same identifier (name{page.4}) has been already used, duplica
+te ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Przetwarzanie danych strumieniowych} [4
+
+]
+Rozdzia\l  2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+\T1/SourceSansPro-TLF/regular/n/10.95 Niniejszy roz-dziaª przed-sta-wia teo-re-
+tyczne pod-stawy prze-twa-rza-nia da-nych stru-mie-nio-wych,
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 4--8
+\T1/SourceSansPro-TLF/regular/n/10.95 ze szcze-gól-nym uwzgl¦d-nie-niem spe-cy-
+fiki ryn-ków fi-nan-so-wych i kryp-to-wa-lu-to-wych. Omó-wiono
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 13--17
+\T1/SourceSansPro-TLF/regular/n/10.95 da-nych o sko«-czo-nym roz-mia-rze, stru-
+mie-nie cha-rak-te-ry-zuj¡ si¦ bra-kiem okre-±lo-nego po-cz¡tku
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.41 \subsection
+                {Przetwarzanie wsadowe} [5]
+Underfull \hbox (badness 1681) in paragraph at lines 44--48
+\T1/SourceSansPro-TLF/regular/n/10.95 Przetwarzanie wsadowe polega na gromadzen
+iu danych przez okre±lony czas, a nast¦pnie ich
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 44--48
+\T1/SourceSansPro-TLF/regular/n/10.95 stosowany w systemach analitycznych, gdzi
+e akceptowalne s¡ opó¹nienia rz¦du minut, godzin
+ []
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 66--70
+\T1/SourceSansPro-TLF/regular/n/10.95 si¦ z operatorów realizuj¡cych transforma
+cje, filtrowanie, agregacj¦ czy wzbogacanie rekordów.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
+[]\T1/SourceSansPro-TLF/regular/n/10.95 Przetwarzanie stru-mie-niowe jest szcze
+-gól-nie istotne w kon-tek-±cie da-nych fi-nan-so-wych,
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.91 \section
+             {Semantyka dostarczania komunikatÃ³w} [6]
+Underfull \hbox (badness 1221) in paragraph at lines 101--106
+\T1/SourceSansPro-TLF/regular/n/10.95 potwierdze« ani powtórze«. Stosowana jest
+ w scenariuszach, gdzie sporadyczna utrata danych
+ []
+
+
+Underfull \hbox (badness 2080) in paragraph at lines 127--130
+\T1/SourceSansPro-TLF/regular/n/10.95 Semantyka \T1/SourceSansPro-TLF/regular/i
+t/10.95 exactly-once \T1/SourceSansPro-TLF/regular/n/10.95 sta-nowi naj-sil-nie
+j-sz¡ gwa-ran-cj¦ --- ka»dy ko-mu-ni-kat jest prze-twa-rzany
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 127--130
+\T1/SourceSansPro-TLF/regular/n/10.95 do-kªad-nie je-den raz, bez utraty i bez 
+du-pli-ka-tów. Jest to naj-bar-dziej po-»¡-dana, lecz za-ra-zem
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.135 
+       [7]
+Underfull \hbox (badness 1270) in paragraph at lines 140--142
+\T1/SourceSansPro-TLF/regular/n/10.95 Wiele ope-ra-cji ana-li-tycz-nych wy-maga
+ agre-ga-cji da-nych w okre-±lo-nych prze-dzia-ªach cza-so-wych.
+ []
+
+
+Underfull \hbox (badness 1460) in paragraph at lines 149--153
+[]\T1/SourceSansPro-TLF/regular/n/10.95 Przykªadem za-sto-so-wa-nia jest ob-li-
+cza-nie ±red-niej ceny w in-ter-wa-ªach mi-nu-to-wych --- ka»da
+ []
+
+
+Underfull \hbox (badness 3108) in paragraph at lines 149--153
+\T1/SourceSansPro-TLF/regular/n/10.95 za-mkni¦-cia, mak-si-mum, mi-ni-mum). Ta-
+kie agre-gaty sta-no-wi¡ pod-staw¦ wy-kre-sów ±wie-co-wych
+ []
+
+
+Underfull \hbox (badness 1990) in paragraph at lines 157--160
+\T1/SourceSansPro-TLF/regular/n/10.95 Okna przesuwne obejmuj¡ zdarzenia z okre±
+lonego przedziaªu czasowego, lecz w odró»nieniu
+ []
+
+
+Underfull \hbox (badness 1097) in paragraph at lines 161--165
+\T1/SourceSansPro-TLF/regular/n/10.95 ak-cji. Okna prze-suwne za-pew-niaj¡ pªyn
+-niej-szy ob-raz zmian, lecz wy-ma-gaj¡ wi¦k-szych za-so-bów
+ []
+
+
+Underfull \hbox (badness 1490) in paragraph at lines 174--176
+[]\T1/SourceSansPro-TLF/regular/n/10.95 W kontek±cie rynków finansowych okna se
+syjne mog¡ by¢ wykorzystywane do identyfikacji
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.184 \subsection
+                 {ZarzÄ…dzanie czasem zdarzeÅ„} [8]
+Underfull \hbox (badness 3884) in paragraph at lines 191--196
+[]\T1/SourceSansPro-TLF/regular/n/10.95 Zdarzenia mog¡ do-cie-ra¢ w ko-lej-no-±
+ci in-nej ni» chro-no-lo-giczna (tzw. \T1/SourceSansPro-TLF/regular/it/10.95 ou
+t-of-order events\T1/SourceSansPro-TLF/regular/n/10.95 ),
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 197--201
+[]\T1/SourceSansPro-TLF/regular/n/10.95 Mechanizm \T1/SourceSansPro-TLF/regular
+/it/10.95 wa-ter-marks \T1/SourceSansPro-TLF/regular/n/10.95 po-zwala ±le-dzi¢ 
+po-st¦p czasu zda-rze« i sy-gna-li-zo-wa¢, »e wszyst-kie
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.228 W
+       ~kontekÅ›cie danych z~rynkÃ³w kryptowalutowych backpressure moÅ¼e wys...
+[9]
+Underfull \hbox (badness 1609) in paragraph at lines 228--232
+[]\T1/SourceSansPro-TLF/regular/n/10.95 W kontek±cie danych z rynków kryptowalu
+towych backpressure mo»e wyst¡pi¢ w okresach
+ []
+
+
+Underfull \hbox (badness 2799) in paragraph at lines 236--240
+\T1/SourceSansPro-TLF/regular/n/10.95 Skalowanie sys-te-mów stru-mie-nio-wych w
+y-maga mo»-li-wo-±ci po-dziaªu stru-mie-nia na nie-za-le»ne
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 267--272
+[]\T1/SourceSansPro-TLF/regular/n/10.95 Zalety ar-chi-tek-tury ste-ro-wa-nej zd
+a-rze-niami obej-muj¡ na-tu-raln¡ asyn-chro-nicz-no±¢ (ope-ra-cje
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.281 
+       [10]) (./tekst/analiza.tex [11] [12
+
+]
+Rozdzia\l  3.
+
+Underfull \hbox (badness 1558) in paragraph at lines 4--12
+\T1/SourceSansPro-TLF/regular/n/10.95 stru-mie-nio-wych da-nych fi-nan-so-wych.
+ W pierw-szej cz¦-±ci omó-wiono za-ªo-»e-nia pro-jek-towe oraz
+ []
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 4--12
+\T1/SourceSansPro-TLF/regular/n/10.95 szcze-gó-ªowe wy-ma-ga-nia funk-cjo-nalne
+ i nie-funk-cjo-nalne, które sta-no-wi¡ pod-staw¦ dla dal-szych
+ []
+
+
+Underfull \hbox (badness 3590) in paragraph at lines 25--32
+\T1/SourceSansPro-TLF/regular/n/10.95 ogra-ni-czo-nego do-st¦pu do sieci ze-wn¦
+trz-nej. Re-ali-za-cja tego celu wpi-suje si¦ w pa-ra-dyg-mat
+ []
+
+[13]
+Underfull \hbox (badness 1478) in paragraph at lines 50--53
+\T1/SourceSansPro-TLF/regular/n/10.95 i udo-st¦p-nia-nie. Ka»da z ka-te-go-rii 
+obej-muje ze-staw ato-mo-wych wy-ma-ga«, które mu-sz¡ zo-sta¢
+ []
+
+
+Underfull \hbox (badness 2951) in paragraph at lines 57--60
+\T1/SourceSansPro-TLF/regular/n/10.95 dzia-ªa-nie wa-run-kuje ja-ko±¢ wszyst-ki
+ch dal-szych eta-pów prze-twa-rza-nia. Po-ni-»ej przed-sta-wiono
+ []
+
+
+Underfull \hbox (badness 3679) in paragraph at lines 66--70
+\T1/SourceSansPro-TLF/regular/n/10.95 prze-ka-zany do dal-szych eta-pów prze-tw
+a-rza-nia w nie-zmie-nio-nej for-mie, z za-cho-wa-niem
+ []
+
+
+Underfull \hbox (badness 2245) in paragraph at lines 70--73
+\T1/SourceSansPro-TLF/regular/n/10.95 pro-wa-dzona jest sub-skryp-cja stru-mie-
+nia da-nych. Po-zwala to na ogra-ni-cze-nie wo-lu-menu
+ []
+
+[14]
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/it' aliased to
+(Font)              `T1/SourceSansPro-TLF/bold/it' on input line 88.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/it' will be
+(Font)              scaled to size 10.95pt on input line 88.
+
+Underfull \hbox (badness 1484) in paragraph at lines 92--98
+\T1/SourceSansPro-TLF/regular/n/10.95 wa-nia da-nych hi-sto-rycz-nych z za-sto-
+so-wa-niem kom-pre-sji (for-mat Pa-rquet lub gzip). Dane
+ []
+
+
+Underfull \hbox (badness 3068) in paragraph at lines 109--111
+\T1/SourceSansPro-TLF/regular/n/10.95 Moduªy prze-twa-rza-nia da-nych (\T1/Sour
+ceSansPro-TLF/regular/it/10.95 ETL -- Extract, Trans-form, Load\T1/SourceSansPr
+o-TLF/regular/n/10.95 ) od-po-wia-daj¡ za trans-for-ma-cj¦
+ []
+
+
+Underfull \hbox (badness 3954) in paragraph at lines 116--118
+[]\T1/SourceSansPro-TLF/bold/n/10.95 Walidacja struk-tu-ralna \T1/SourceSansPro
+-TLF/regular/n/10.95 -- ka»dy ko-mu-ni-kat musi zo-sta¢ pod-dany wa-li-da-cji p
+od k¡-tem
+ []
+
+[15]
+Underfull \hbox (badness 2717) in paragraph at lines 160--162
+\T1/SourceSansPro-TLF/regular/n/10.95 bro-ker) na wy-pa-dek chwi-lo-wej nie-do-
+st¦p-no-±ci usªug kon-su-menc-kich, z gwa-ran-to-wa-nym
+ []
+
+
+Underfull \hbox (badness 3058) in paragraph at lines 162--164
+[]\T1/SourceSansPro-TLF/bold/n/10.95 Optymalizacja za-so-bów \T1/SourceSansPro-
+TLF/regular/n/10.95 -- wy-ko-rzy-sta-nie pa-mi¦ci ope-ra-cyj-nej i pro-ce-sora 
+po-winno by¢
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 162--164
+\T1/SourceSansPro-TLF/regular/n/10.95 pro-por-cjo-nalne do ob-ci¡-»e-nia, bez w
+y-cie-ków pa-mi¦ci (\T1/SourceSansPro-TLF/regular/it/10.95 me-mory le-aks\T1/So
+urceSansPro-TLF/regular/n/10.95 ) przy dªu-go-trwa-ªym
+ []
+
+[16]
+Underfull \hbox (badness 3118) in paragraph at lines 173--176
+[]\T1/SourceSansPro-TLF/bold/n/10.95 Odporno±¢ na awa-rie po-je-dyn-czych kom-p
+o-nen-tów \T1/SourceSansPro-TLF/regular/n/10.95 -- awa-ria jed-nego z mo-du-ªów
+ nie
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 186--193
+\T1/SourceSansPro-TLF/regular/n/10.95 W ob-sza-rze gro-ma-dze-nia i prze-twa-rz
+a-nia da-nych ryn-ko-wych z gieªd kryp-to-wa-lut ist-nieje wiele
+ []
+
+
+Underfull \hbox (badness 3179) in paragraph at lines 197--204
+\T1/SourceSansPro-TLF/regular/n/10.95 Projekt \T1/SourceSansPro-TLF/regular/it/
+10.95 Binance-Data-Collector-and-Visualization \T1/SourceSansPro-TLF/regular/n/
+10.95 [[][]25[][]] kon-cen-truje si¦ na cy-klicz-nym po-bie-ra-niu
+ []
+
+
+Underfull \hbox (badness 1142) in paragraph at lines 197--204
+\T1/SourceSansPro-TLF/regular/n/10.95 da-nych ±wie-co-wych (\T1/SourceSansPro-T
+LF/regular/it/10.95 can-dle-stick / kline\T1/SourceSansPro-TLF/regular/n/10.95 
+) z gieªdy Bi-nance i pre-zen-ta-cji ich w po-staci wy-kre-sów
+ []
+
+[17]
+Underfull \hbox (badness 2635) in paragraph at lines 222--229
+\T1/SourceSansPro-TLF/regular/n/10.95 w cza-sie rze-czy-wi-stym (np. API do za-
+py-ta«) oraz me-cha-ni-zmów dªu-go-ter-mi-no-wej ar-chi-wi-za-cji
+ []
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 222--229
+\T1/SourceSansPro-TLF/regular/n/10.95 z po-dzia-ªem na par-ty-cje i kom-pre-sj¡
+. Nie jest rów-nie» eks-po-no-wany kom-po-nent po-wia-do-mie«
+ []
+
+
+Underfull \hbox (badness 3323) in paragraph at lines 222--229
+\T1/SourceSansPro-TLF/regular/n/10.95 u»yt-kow-nika o zda-rze-niach ryn-ko-wych
+. Sys-tem przed-sta-wiony w ni-niej-szej pracy in-te-gruje te
+ []
+
+
+Underfull \hbox (badness 3068) in paragraph at lines 241--247
+\T1/SourceSansPro-TLF/regular/n/10.95 (\T1/SourceSansPro-TLF/regular/it/10.95 b
+atch\T1/SourceSansPro-TLF/regular/n/10.95 ) i na pro-ce-sie po-bie-ra-nia da-ny
+ch hi-sto-rycz-nych, po-mi-ja-j¡c klu-czowe aspekty pracy ze
+ []
+
+
+Underfull \hbox (badness 3179) in paragraph at lines 251--256
+\T1/SourceSansPro-TLF/regular/n/10.95 da-nych stru-mie-nio-wych Spot z Bi-nance
+. W re-po-zy-to-rium znaj-duj¡ si¦ przy-kªa-dowe pro-gramy
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 257--263
+\T1/SourceSansPro-TLF/regular/n/10.95 w apli-ka-cjach. Pro-jekt opi-sany w prac
+y uzu-peª-nia te braki po-przez wpro-wa-dze-nie lo-gicz-nego
+ []
+
+[18]) (./tekst/projekt.tex [19] [20
+
+]
+Rozdzia\l  4.
+
+Underfull \hbox (badness 2865) in paragraph at lines 13--14
+[]\T1/SourceSansPro-TLF/regular/n/10.95 Poni»ej przed-sta-wiono szcze-gó-ªowy o
+pis ka»-dego z kom-po-nen-tów sys-temu wraz z opi-sem
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
+3.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Underfull \hbox (badness 1762) in paragraph at lines 39--42
+\T1/SourceSansPro-TLF/regular/n/10.95 NATS Jet-Stream peªni rol¦ cen-tral-nej s
+zyny da-nych (\T1/SourceSansPro-TLF/regular/it/10.95 data bus\T1/SourceSansPro-
+TLF/regular/n/10.95 ) ª¡-cz¡-cej wszyst-kie kom-po-nenty
+ []
+
+[21]
+Underfull \hbox (badness 1888) in paragraph at lines 53--54
+[]\T1/SourceSansPro-TLF/bold/n/10.95 Retencja \T1/SourceSansPro-TLF/regular/n/1
+0.95 -- konfigurowalny czas przechowywania komunikatów w strumieniu (domy±lnie
+ []
+
+[22]
+Underfull \hbox (badness 3428) in paragraph at lines 102--105
+\T1/SourceSansPro-TLF/regular/n/10.95 MinIO sta-nowi war-stw¦ zimn¡ sys-temu, p
+rze-zna-czon¡ do dªu-go-ter-mi-no-wego prze-cho-wy-wa-nia
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 102--105
+\T1/SourceSansPro-TLF/regular/n/10.95 da-nych hi-sto-rycz-nych. Jest to ma-ga-z
+yn obiek-towy kom-pa-ty-bilny z pro-to-ko-ªem Ama-zon S3, co
+ []
+
+[23]) (./tekst/implementacja.tex [24]
+Rozdzia\l  5.
+
+Underfull \hbox (badness 3291) in paragraph at lines 4--10
+\T1/SourceSansPro-TLF/regular/n/10.95 przed-sta-wiono na-po-tkane pro-blemy i w
+y-zwa-nia, które wy-ma-gaªy za-sto-so-wa-nia od-po-wied-nich
+ []
+
+[25
+
+]
+<rysunki/docker_desktop.png, id=832, 1113.40968pt x 585.68813pt>
+File: rysunki/docker_desktop.png Graphic file (type png)
+<use rysunki/docker_desktop.png>
+Package pdftex.def Info: rysunki/docker_desktop.png  used on input line 44.
+(pdftex.def)             Requested size: 386.96027pt x 203.54614pt.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 45.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
+(Font)              scaled to size 10.0pt on input line 45.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 45.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
+(Font)              scaled to size 10.0pt on input line 45.
+
+Underfull \hbox (badness 3189) in paragraph at lines 66--67
+[]\T1/SourceSansPro-TLF/regular/n/10.95 Natywna ob-sªuga do-ku-men-tów JSON, co
+ eli-mi-nuje ko-niecz-no±¢ ma-po-wa-nia obiektowo-
+ []
+
+<rysunki/mongo_trade_record.png, id=838, 874.01532pt x 617.30624pt>
+File: rysunki/mongo_trade_record.png Graphic file (type png)
+<use rysunki/mongo_trade_record.png>
+Package pdftex.def Info: rysunki/mongo_trade_record.png  used on input line 78.
+
+(pdftex.def)             Requested size: 386.96027pt x 273.30164pt.
+[26 <./rysunki/docker_desktop.png>]
+<rysunki/mongo_notification.png, id=847, 874.76813pt x 519.44063pt>
+File: rysunki/mongo_notification.png Graphic file (type png)
+<use rysunki/mongo_notification.png>
+Package pdftex.def Info: rysunki/mongo_notification.png  used on input line 85.
+
+(pdftex.def)             Requested size: 386.96027pt x 229.77519pt.
+ [27 <./rysunki/mongo_trade_record.png> <./rysunki/mongo_notification.png>]
+Underfull \hbox (badness 3281) in paragraph at lines 99--107
+\T1/SourceSansPro-TLF/regular/n/10.95 we-dªug czasu (ro-k/mie-si¡-c/dzie-«/go-d
+zina), na-to-miast dla da-nych prze-two-rzo-nych i agre-ga-tów
+ []
+
+<rysunki/minio_homepage.png, id=859, 886.81313pt x 389.95688pt>
+File: rysunki/minio_homepage.png Graphic file (type png)
+<use rysunki/minio_homepage.png>
+Package pdftex.def Info: rysunki/minio_homepage.png  used on input line 110.
+(pdftex.def)             Requested size: 386.96027pt x 170.15944pt.
+<rysunki/minio_analytics_example.png, id=860, 1570.36688pt x 1026.83624pt>
+File: rysunki/minio_analytics_example.png Graphic file (type png)
+<use rysunki/minio_analytics_example.png>
+Package pdftex.def Info: rysunki/minio_analytics_example.png  used on input lin
+e 118.
+(pdftex.def)             Requested size: 386.96027pt x 253.0264pt.
+[28 <./rysunki/minio_homepage.png>]
+<rysunki/gql_query_example_0.png, id=872, 878.53218pt x 396.7322pt>
+File: rysunki/gql_query_example_0.png Graphic file (type png)
+<use rysunki/gql_query_example_0.png>
+Package pdftex.def Info: rysunki/gql_query_example_0.png  used on input line 14
+1.
+(pdftex.def)             Requested size: 386.96027pt x 174.75037pt.
+ [29 <./rysunki/minio_analytics_example.png>]
+<rysunki/model_data.png, id=881, 737.75626pt x 371.88937pt>
+File: rysunki/model_data.png Graphic file (type png)
+<use rysunki/model_data.png>
+Package pdftex.def Info: rysunki/model_data.png  used on input line 158.
+(pdftex.def)             Requested size: 295.90588pt x 149.156pt.
+
+Underfull \hbox (badness 3088) in paragraph at lines 166--169
+\T1/SourceSansPro-TLF/regular/n/10.95 Apache Pa-rquet to ko-lum-nowy for-mat pr
+ze-cho-wy-wa-nia da-nych, zop-ty-ma-li-zo-wany pod k¡-tem
+ []
+
+[30 <./rysunki/gql_query_example_0.png> <./rysunki/model_data.png>]
+Underfull \hbox (badness 3354) in paragraph at lines 198--201
+\T1/SourceSansPro-TLF/regular/n/10.95 Realizacja sys-temu o ar-chi-tek-tu-rze r
+oz-pro-szo-nej wi¡»e si¦ z sze-re-giem wy-zwa« pro-jek-to-wych
+ []
+
+[31]
+Underfull \hbox (badness 3209) in paragraph at lines 230--234
+\T1/SourceSansPro-TLF/regular/n/10.95 zda-rze« (kon-trakty), za-pew-ni¢ wer-sjo
+-no-wa-nie sche-ma-tów oraz ob-sªu-»y¢ sce-na-riu-sze ta-kie jak
+ []
+
+
+Underfull \hbox (badness 3471) in paragraph at lines 238--242
+\T1/SourceSansPro-TLF/regular/n/10.95 System skªada si¦ z wielu kon-te-ne-rów D
+o-cker, któ-rych uru-cho-mie-nie i ko-or-dy-na-cja wy-maga
+ []
+
+
+Underfull \hbox (badness 1789) in paragraph at lines 250--254
+\T1/SourceSansPro-TLF/regular/n/10.95 o odmiennych charakterystykach. Warstwa g
+or¡ca (MongoDB) optymalizowana jest pod k¡tem
+ []
+
+
+Underfull \hbox (badness 1077) in paragraph at lines 268--272
+\T1/SourceSansPro-TLF/regular/n/10.95 Efektywne przenoszenie danych mi¦dzy wars
+twami wymaga starannej optymalizacji pod k¡tem
+ []
+
+[32]) (./tekst/rozwoj.tex
+Underfull \hbox (badness 2903) in paragraph at lines 4--10
+\T1/SourceSansPro-TLF/regular/n/10.95 na-tu-ral-nych kie-run-ków roz-woju, któr
+e po-zwo-li-ªyby zwi¦k-szy¢ nie-za-wod-no±¢, uªa-twi¢ dia-gnoz¦
+ []
+
+
+Underfull \hbox (badness 1983) in paragraph at lines 21--27
+\T1/SourceSansPro-TLF/regular/n/10.95 Kolejnym kro-kiem jest eks-po-zy-cja me-t
+ryk tech-nicz-nych i do-me-no-wych, ta-kich jak: opó¹-nie-nie
+ []
+
+
+Underfull \hbox (badness 2521) in paragraph at lines 21--27
+\T1/SourceSansPro-TLF/regular/n/10.95 me-tryk do sys-temu typu Pro-me-theus ora
+z bu-dowa da-sh-bo-ar-dów w Gra-fa-nie po-zwo-li-ªaby nie
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 30--35
+\T1/SourceSansPro-TLF/regular/n/10.95 co utrudnia ±ledzenie jego przebiegu. Wdr
+o»enie ±ledzenia rozproszonego (np. OpenTelemetry)
+ []
+
+
+Underfull \hbox (badness 1521) in paragraph at lines 38--43
+\T1/SourceSansPro-TLF/regular/n/10.95 W pro-jek-cie ist-nieje bot Te-le-gram wy
+-ko-rzy-sty-wany do po-wia-do-mie« o zda-rze-niach ryn-ko-wych.
+ []
+
+[33]
+Underfull \hbox (badness 2717) in paragraph at lines 51--56
+[]\T1/SourceSansPro-TLF/regular/n/10.95 W prak-tyce wy-god-nym po-dej-±ciem jes
+t za-sto-so-wa-nie fe-de-ra-cji Gra-phQL, czyli me-cha-ni-zmu
+ []
+
+
+Underfull \hbox (badness 1521) in paragraph at lines 59--63
+\T1/SourceSansPro-TLF/regular/n/10.95 Aktualna war-stwa ana-li-tyczna ma cha-ra
+k-ter de-mon-stra-cyjny i kon-cen-truje si¦ na pod-sta-wo-wej
+ []
+
+
+Underfull \hbox (badness 2418) in paragraph at lines 66--71
+\T1/SourceSansPro-TLF/regular/n/10.95 System do-star-cza obec-nie dane oczysz-c
+zone i za-gre-go-wane, co sta-nowi do-bry fun-da-ment do
+ []
+
+
+Underfull \hbox (badness 1558) in paragraph at lines 66--71
+\T1/SourceSansPro-TLF/regular/n/10.95 W wa-rian-cie pro-duk-cyj-nym mo»na roz-w
+a-»y¢ osobny ser-wis pu-bli-ku-j¡cy pre-dyk-cje jako ko-lejne
+ []
+
+) (./tekst/testy.tex
+Underfull \hbox (badness 1052) in paragraph at lines 74--1
+\T1/SourceSansPro-TLF/regular/n/10.95 wy-ma-ga-nia za-so-bowe. Ska-lo-wa-nie do
+ peª-nej li-sty sym-boli do-st¦p-nych na gieª-dzie wy-ma-ga-ªoby
+ []
+
+
+Underfull \hbox (badness 3312) in paragraph at lines 74--1
+\T1/SourceSansPro-TLF/regular/n/10.95 po-prawy me-cha-ni-zmów \T1/SourceSansPro
+-TLF/regular/it/10.95 back-pres-sure\T1/SourceSansPro-TLF/regular/n/10.95 , fra
+g-men-ta-cji stru-mieni i kon-su-men-tów (np. po-dziaª po
+ []
+
+[34] [35] [36
+
+]
+Rozdzia\l  6.
+
+Underfull \hbox (badness 3039) in paragraph at lines 4--8
+\T1/SourceSansPro-TLF/regular/n/10.95 ma-nu-al-nych obej-mu-j¡-cych wszyst-kie 
+klu-czowe kom-po-nenty ar-chi-tek-tury. Te-sty miaªy na celu
+ []
+
+[37]
+Underfull \hbox (badness 1092) in paragraph at lines 36--38
+\T1/SourceSansPro-TLF/regular/n/10.95 Test weryfikuje poprawno±¢ poª¡czenia ser
+wera strumieniowego z API Binance oraz odbierania
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+[]|\T1/SourceSansPro-TLF/regular/n/10.95 Lista sym-boli: \T1/SourceSansPro-TLF/
+regular/it/10.95 BTCUSDT, ETHUSDT\T1/SourceSansPro-TLF/regular/n/10.95 ; URL We
+-bSoc-ket:
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 53--53
+[]|\T1/SourceSansPro-TLF/regular/n/10.95 Poª¡czenie zostaªo nawi¡zane poprawnie
+. Aplikacja otrzymaªa
+ []
+
+
+Underfull \hbox (badness 1460) in paragraph at lines 53--53
+\T1/SourceSansPro-TLF/regular/n/10.95 komunikaty JSON zgodne z dokumentacj¡ Bin
+ance, w logach
+ []
+
+[38]
+Underfull \hbox (badness 1394) in paragraph at lines 89--92
+[]\T1/SourceSansPro-TLF/regular/n/10.95 Test potwierdziª poprawne dziaªanie mec
+hanizmu publikowania zdarze« do magistrali NATS
+ []
+
+[39]
+Underfull \hbox (badness 3323) in paragraph at lines 113--113
+[]|\T1/SourceSansPro-TLF/regular/n/10.95 Subject: \T1/SourceSansPro-TLF/regular
+/it/10.95 con-su-mer.mongo\T1/SourceSansPro-TLF/regular/n/10.95 , Du-ra-ble: \T
+1/SourceSansPro-TLF/regular/it/10.95 mongo-subscriber-durable\T1/SourceSansPro-
+TLF/regular/n/10.95 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--114
+\T1/SourceSansPro-TLF/regular/n/10.95 2. Pu-bli-ka-cja zda-rze-nia do ko-lejki 
+NATS na sub-ject
+ []
+
+
+Underfull \hbox (badness 1394) in paragraph at lines 116--116
+[]|\T1/SourceSansPro-TLF/regular/n/10.95 Zdarzenie zo-staªo ode-brane i prze-tw
+o-rzone po-praw-nie. Do-ku-
+ []
+
+
+Underfull \hbox (badness 2245) in paragraph at lines 116--116
+\T1/SourceSansPro-TLF/regular/n/10.95 ment z od-po-wied-nimi po-lami zo-staª za
+-pi-sany do ko-lek-cji \T1/SourceSansPro-TLF/regular/it/10.95 Bi-
+ []
+
+[40]
+Underfull \hbox (badness 2134) in paragraph at lines 144--144
+[]|\T1/SourceSansPro-TLF/regular/n/10.95 Subject: \T1/SourceSansPro-TLF/regular
+/it/10.95 con-su-mer.telegrambot\T1/SourceSansPro-TLF/regular/n/10.95 , Du-ra-b
+le: \T1/SourceSansPro-TLF/regular/it/10.95 telegram-bot-durable\T1/SourceSansPr
+o-TLF/regular/n/10.95 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/SourceSansPro-TLF/regular/n/10.95 2. Pu-bli-ka-cja zda-rze-nia do ko-lejki 
+NATS na sub-ject
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/SourceSansPro-TLF/regular/n/10.95 4. Ana-liza lo-gów apli-ka-cji w celu po-
+twier-dze-nia od-bioru
+ []
+
+
+Underfull \hbox (badness 2635) in paragraph at lines 151--154
+[]\T1/SourceSansPro-TLF/regular/n/10.95 Test po-twier-dziª po-prawne dzia-ªa-ni
+e kon-su-menta Te-le-gram Bot jako sub-skry-benta zda-rze«
+ []
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
+[]|\T1/SourceSansPro-TLF/regular/n/10.95 1. Pu-bli-ka-cja zda-rze-nia do ko-lej
+ki NATS na sub-ject
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
+\T1/SourceSansPro-TLF/regular/n/10.95 4. Spraw-dze-nie lo-gów po-twier-dza-j¡-c
+ych wy-sªa-nie
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 177--177
+\T1/SourceSansPro-TLF/regular/n/10.95 dza speª-nie-nie wa-runku i wy-syªa po-wi
+a-do-mie-nie do Te-le-gram
+ []
+
+[42]
+Underfull \hbox (badness 1337) in paragraph at lines 192--194
+\T1/SourceSansPro-TLF/regular/n/10.95 Test weryfikuje poprawno±¢ dziaªania mech
+anizmu filtrowania w przypadku, gdy zdarzenie nie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--205
+[]|\T1/SourceSansPro-TLF/regular/n/10.95 Weryfikacja po-praw-no-±ci dzia-ªa-nia
+ me-cha-ni-zmu fil-tro-wa-nia
+ []
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 206--206
+\T1/SourceSansPro-TLF/regular/it/10.95 = 10.0\T1/SourceSansPro-TLF/regular/n/10
+.95 , warto±¢ caªkowita transakcji: 300 000 USD, próg filtra:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+[]|\T1/SourceSansPro-TLF/regular/n/10.95 1. Pu-bli-ka-cja zda-rze-nia do ko-lej
+ki NATS na sub-ject
+ []
+
+
+Underfull \hbox (badness 1917) in paragraph at lines 207--207
+\T1/SourceSansPro-TLF/regular/n/10.95 4. Spraw-dze-nie lo-gów po-twier-dza-j¡-c
+ych od-rzu-ce-nie zda-rze-nia
+ []
+
+
+Underfull \hbox (badness 1205) in paragraph at lines 209--209
+[]|\T1/SourceSansPro-TLF/regular/n/10.95 Warunek fil-tra nie zo-staª speª-niony
+. Te-le-gram Bot prze-two-rzyª
+ []
+
+[43]
+Underfull \hbox (badness 1596) in paragraph at lines 223--225
+\T1/SourceSansPro-TLF/regular/n/10.95 Test weryfikuje poprawno±¢ dziaªania inte
+rfejsu GraphQL oraz mechanizmu filtrowania danych
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 236--236
+\T1/SourceSansPro-TLF/regular/n/10.95 ko-rzy-sta-niem fil-trów cza-so-wych oraz
+ po-twier-dze-nie zwra-ca-nia
+ []
+
+
+Underfull \hbox (badness 2376) in paragraph at lines 238--238
+\T1/SourceSansPro-TLF/regular/n/10.95 3. Wy-ko-na-nie za-py-ta-nia Gra-phQL z f
+il-trem cza-so-wym za-wsze
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 239--239
+[]|\T1/SourceSansPro-TLF/regular/n/10.95 Zapytanie Gra-phQL zo-staje prze-two-r
+zone, filtr \T1/SourceSansPro-TLF/regular/it/10.95 event-Time.after
+ []
+
+
+Underfull \hbox (badness 2269) in paragraph at lines 244--247
+\T1/SourceSansPro-TLF/regular/n/10.95 cza-sowe, licz-bowe oraz wy-ra-»e-nia re-
+gu-larne), wy-ko-nuje sor-to-wa-nie oraz li-mi-to-wa-nie wy-ni-ków
+ []
+
+[44]
+Underfull \hbox (badness 3088) in paragraph at lines 268--268
+[]|\T1/SourceSansPro-TLF/regular/n/10.95 Zapytanie Gra-phQL typu \T1/SourceSans
+Pro-TLF/regular/it/10.95 tra-des \T1/SourceSansPro-TLF/regular/n/10.95 z fil-tr
+em: \T1/SourceSansPro-TLF/regular/it/10.95 event-Time.before <
+ []
+
+
+Underfull \hbox (badness 1303) in paragraph at lines 270--270
+\T1/SourceSansPro-TLF/regular/n/10.95 bazy da-nych nie zwraca »ad-nych re-kor-d
+ów. Od-po-wied¹ JSON
+ []
+
+[45]
+Underfull \hbox (badness 1688) in paragraph at lines 297--297
+[]|\T1/SourceSansPro-TLF/regular/n/10.95 Przenoszenie danych z MongoDB do MinIO
+ oraz generowanie
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 299--299
+\T1/SourceSansPro-TLF/regular/it/10.95 ti-fi-ca-tio-nE-vent\T1/SourceSansPro-TL
+F/regular/n/10.95 ), Mi-nIO buc-ket: \T1/SourceSansPro-TLF/regular/it/10.95 dat
+a-lake\T1/SourceSansPro-TLF/regular/n/10.95 , war-stwy: \T1/SourceSansPro-TLF/r
+egular/it/10.95 ra-w/tra-des,
+ []
+
+
+Underfull \hbox (badness 3492) in paragraph at lines 300--300
+\T1/SourceSansPro-TLF/regular/n/10.95 7. Spraw-dze-nie ko-lek-cji Mon-goDB -- r
+e-kordy po-winny zo-sta¢
+ []
+
+
+Underfull \hbox (badness 3449) in paragraph at lines 301--301
+\T1/SourceSansPro-TLF/regular/n/10.95 i za-pi-suje je w for-ma-cie Pa-rquet w f
+ol-de-rze \T1/SourceSansPro-TLF/regular/it/10.95 cu-ra-ted\T1/SourceSansPro-TLF
+/regular/n/10.95 . Mo-duª
+ []
+
+) (./tekst/podsumowanie.tex
+Underfull \hbox (badness 3291) in paragraph at lines 306--1
+\T1/SourceSansPro-TLF/regular/n/10.95 we-dªug sym-bolu i prze-dzia-ªów cza-so-w
+ych. Me-cha-nizm za-pew-nia od-ci¡-»e-nie bazy ope-ra-cyj-nej
+ []
+
+[46] [47] [48
+
+]
+Rozdzia\l  7.
+
+Underfull \hbox (badness 2762) in paragraph at lines 4--8
+\T1/SourceSansPro-TLF/regular/n/10.95 (\T1/SourceSansPro-TLF/regular/it/10.95 o
+n-premises\T1/SourceSansPro-TLF/regular/n/10.95 ). Za-ªo-»e-nia te zo-staªy zre
+-ali-zo-wane w peªni --- po-wstaª dzia-ªa-j¡cy sys-tem oparty
+ []
+
+
+Underfull \hbox (badness 1205) in paragraph at lines 4--8
+\T1/SourceSansPro-TLF/regular/n/10.95 na ar-chi-tek-tu-rze mi-kro-usªu-go-wej, 
+który in-te-gruje wszyst-kie za-pla-no-wane kom-po-nenty i speª-nia
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 9--22
+\T1/SourceSansPro-TLF/regular/n/10.95 z We-bSoc-ket gieªdy Bi-nance, au-to-ma-t
+ycz-nie wzna-wia-j¡cy po-ª¡-cze-nie w przy-padku awa-rii. Zbu-
+ []
+
+
+Underfull \hbox (badness 1789) in paragraph at lines 9--22
+\T1/SourceSansPro-TLF/regular/n/10.95 gwa-ran-to-wane do-star-cze-nie ko-mu-ni-
+ka-tów na-wet w przy-padku chwi-lo-wej nie-do-st¦p-no-±ci usªug
+ []
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 9--22
+\T1/SourceSansPro-TLF/regular/n/10.95 ma-ga-zynu obiek-to-wego Mi-nIO, opty-ma-
+li-zu-j¡c za-soby war-stwy ope-ra-cyj-nej przy za-cho-wa-niu do-
+ []
+
+
+Underfull \hbox (badness 3536) in paragraph at lines 23--29
+[]\T1/SourceSansPro-TLF/regular/n/10.95 System zo-staª po-my±l-nie uru-cho-mion
+y i zwe-ry-fi-ko-wany pod k¡-tem po-praw-no-±ci dzia-ªa-nia
+ []
+
+
+Underfull \hbox (badness 3579) in paragraph at lines 23--29
+\T1/SourceSansPro-TLF/regular/n/10.95 po-szcze-gól-nych kom-po-nen-tów oraz prz
+e-pªywu da-nych mi¦-dzy nimi. Te-sty ma-nu-alne opi-sane
+ []
+
+
+Underfull \hbox (badness 1616) in paragraph at lines 23--29
+\T1/SourceSansPro-TLF/regular/n/10.95 We-ry-fi-ka-cja me-cha-ni-zmu mi-gra-cji 
+da-nych mi¦-dzy war-stwami wy-ka-zaªa po-prawne prze-no-sze-nie
+ []
+
+[49]
+Underfull \hbox (badness 1953) in paragraph at lines 36--49
+[]\T1/SourceSansPro-TLF/regular/n/10.95 System mo»na roz-wi-ja¢ w wielu kie-run
+-kach, przede wszyst-kim po-przez cen-tra-li-za-cj¦ lo-gów
+ []
+
+
+Underfull \hbox (badness 2781) in paragraph at lines 36--49
+\T1/SourceSansPro-TLF/regular/n/10.95 dia-gnoz¦ pro-ble-mów w sys-te-mach roz-p
+ro-szo-nych. Istot-nym uzu-peª-nie-niem by-ªaby eks-po-zy-cja
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 36--49
+\T1/SourceSansPro-TLF/regular/n/10.95 no±¢ w oknach kro-cz¡-cych, wy-kry-wa-nie
+ ano-ma-lii czy bu-dow¦ mo-deli pre-dyk-cyj-nych w ra-mach
+ []
+
+
+Underfull \hbox (badness 1762) in paragraph at lines 36--49
+\T1/SourceSansPro-TLF/regular/n/10.95 po-toku ucze-nia ma-szy-no-wego. Do-dat-k
+owo, wpro-wa-dze-nie aler-tów ope-ra-cyj-nych in-for-mu-j¡-cych
+ []
+
+
+Underfull \hbox (badness 2343) in paragraph at lines 36--49
+\T1/SourceSansPro-TLF/regular/n/10.95 me-cha-ni-zmów frag-men-ta-cji i lep-szeg
+o za-rz¡-dza-nia back-pres-sure. Za-pre-zen-to-wana ar-chi-tek-tura
+ []
+
+
+Underfull \hbox (badness 3049) in paragraph at lines 50--65
+[]\T1/SourceSansPro-TLF/regular/n/10.95 Implementacja sys-temu po-zwo-liªa na p
+rak-tyczn¡ we-ry-fi-ka-cj¦ wy-bra-nych tech-no-lo-gii. J¦-zyk
+ []
+
+
+Underfull \hbox (badness 3482) in paragraph at lines 50--65
+\T1/SourceSansPro-TLF/regular/n/10.95 Go oka-zaª si¦ nie-zwy-kle efek-tyw-nym w
+y-bo-rem do bu-dowy usªug sie-cio-wych i prze-twa-rza-nia
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 50--65
+\T1/SourceSansPro-TLF/regular/n/10.95 wer-sja nie otrzy-muje ju» ak-tu-ali-za-c
+ji, wspar-cia tech-nicz-nego, a ofi-cjalna do-ku-men-ta-cja zo-staªa
+ []
+
+
+Underfull \hbox (badness 2126) in paragraph at lines 50--65
+\T1/SourceSansPro-TLF/regular/n/10.95 za-sadne by-ªoby roz-wa-»e-nie al-ter-na-
+tyw, ta-kich jak Se-awe-edFS czy bez-po-±red-nie wy-ko-rzy-sta-nie
+ []
+
+) [50]
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/sc' aliased to
+(Font)              `T1/SourceSansPro-TLF/regular/sc' on input line 127.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/sc' will be
+(Font)              scaled to size 10.95pt on input line 127.
+
+Underfull \hbox (badness 2556) in paragraph at lines 127--127
+\T1/SourceSansPro-TLF/regular/it/10.95 la-ble, and Ma-in-ta-ina-ble Sys-tems\T1
+/SourceSansPro-TLF/regular/n/10.95 . O'Reilly Me-dia, 2017, Roz-dziaª: Mes-sage
+ Bro-kers, \T1/SourceSansPro-TLF/regular/sc/10.95 isbn\T1/SourceSansPro-TLF/reg
+ular/n/10.95 :
+ []
+
+[51
+
+]
+Underfull \hbox (badness 1681) in paragraph at lines 127--127
+[]\T1/SourceSansPro-TLF/regular/n/10.95 Hohpe, G. i Woolf, B., \T1/SourceSansPr
+o-TLF/regular/it/10.95 Enterprise Integration Patterns: Designing, Building, an
+d Deploying
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 127--127
+[]\T1/SourceSansPro-TLF/regular/n/10.95 CoinGecko Research, \T1/SourceSansPro-T
+LF/regular/it/10.95 2025 Cryptocurrency Exchange Market Report\T1/SourceSansPro
+-TLF/regular/n/10.95 , Raport roczny, sekcja
+ []
+
+[52]
+Underfull \hbox (badness 1226) in paragraph at lines 127--127
+[]\T1/SourceSansPro-TLF/regular/n/10.95 Thusoo, A. i in., ``Hive - A Petabyte S
+cale Data Warehouse Using Hadoop,'' \T1/SourceSansPro-TLF/regular/it/10.95 Proc
+eedings -
+ []
+
+[53] [54
+
+] [55
+
+] (./EE-dyplom.aux)
+Package rerunfilecheck Info: File `EE-dyplom.out' has not changed.
+(rerunfilecheck)             Checksum: 589953EE0CFD8AB9E678857AFCDC82B2;19624.
+Package logreq Info: Writing requests to 'EE-dyplom.run.xml'.
+\openout1 = `EE-dyplom.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 37072 strings out of 479544
+ 702192 string characters out of 5876553
+ 1405446 words of memory out of 5000000
+ 54182 multiletter control sequences out of 15000+600000
+ 627590 words of font info for 82 fonts, out of 8000000 for 9000
+ 415 hyphenation exceptions out of 8191
+ 114i,12n,131p,742b,1966s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/sourcesanspro/a_4jropk.enc} </
+home/amdla/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk>{/
+usr/share/texlive/texmf-dist/fonts/enc/dvips/sourcesanspro/a_emkxm5.enc}{/usr/s
+hare/texlive/texmf-dist/fonts/enc/dvips/sourcesanspro/a_5ponh6.enc}</usr/share/
+texlive/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Bold.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-BoldIt.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPr
+o-It.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceS
+ansPro-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+
+Output written on EE-dyplom.pdf (65 pages, 1192231 bytes).
+PDF statistics:
+ 1229 PDF objects out of 1440 (max. 8388607)
+ 1049 compressed objects within 11 object streams
+ 217 named destinations out of 1000 (max. 500000)
+ 890 words of extra memory for PDF output out of 10000 (max. 10000000)
+

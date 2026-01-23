@@ -1,0 +1,16 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'EE-dyplom.blg'
+[62] biber:340> INFO - === Wed Jan 21, 2026, 21:37:32
+[77] Biber.pm:418> INFO - Reading 'EE-dyplom.bcf'
+[124] Biber.pm:972> INFO - Found 46 citekeys in bib section 0
+[134] Biber.pm:4383> INFO - Processing section 0
+[142] Biber.pm:4574> INFO - Looking for bibtex file 'EE-dyplom.bib' for section 0
+[147] bibtex.pm:1713> INFO - LaTeX decoding ...
+[168] bibtex.pm:1518> INFO - Found BibTeX data source 'EE-dyplom.bib'
+[353] UCollate.pm:68> INFO - Overriding locale 'pl-PL' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[354] UCollate.pm:68> INFO - Overriding locale 'pl-PL' defaults 'variable = shifted' with 'variable = non-ignorable'
+[354] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'pl-PL'
+[371] bbl.pm:654> INFO - Writing 'EE-dyplom.bbl' with encoding 'UTF-8'
+[392] bbl.pm:757> INFO - Output to EE-dyplom.bbl
+[393] Biber.pm:130> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[393] Biber.pm:132> INFO - WARNINGS: 1

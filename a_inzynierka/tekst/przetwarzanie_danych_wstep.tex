@@ -1,0 +1,289 @@
+\chapter{Przetwarzanie danych strumieniowych}
+\label{ch:przetwarzanie_danych}
+
+Niniejszy rozdział przedstawia teoretyczne podstawy przetwarzania danych strumieniowych, ze~szczególnym uwzględnieniem
+specyfiki rynków finansowych i~kryptowalutowych.
+Omówiono kluczowe koncepcje, modele przetwarzania oraz wyzwania związane z~obsługą ciągłych przepływów danych
+w~czasie rzeczywistym.
+
+
+\section{Charakterystyka danych strumieniowych}
+\label{sec:charakterystyka_strumieni}
+
+Dane strumieniowe (\textit{streaming data}) to~ciągły, potencjalnie nieskończony przepływ rekordów generowanych
+w~czasie rzeczywistym przez różnorodne źródła.
+W~odróżnieniu od~tradycyjnych zbiorów danych o~skończonym rozmiarze, strumienie charakteryzują się brakiem określonego
+początku i~końca --- nowe dane napływają nieprzerwanie, a~ich przetwarzanie musi odbywać się na~bieżąco~\cite{data_stream_def}.
+
+W~kontekście rynków kryptowalutowych dane strumieniowe obejmują przede wszystkim zdarzenia transakcyjne
+(\textit{trade events}), aktualizacje arkuszy zleceń (\textit{order book updates}) oraz zmiany cen i~wolumenów.
+Giełdy takie jak Binance generują tysiące komunikatów na~sekundę dla~popularnych par handlowych, co~stawia wysokie
+wymagania przed systemami przetwarzającymi.
+
+Kluczowe cechy danych strumieniowych z~rynków finansowych to~\cite{burst_events, time_value_curve, 8_requirements}:
+\begin{itemize}
+    \item \textbf{Wysoka częstotliwość} --- komunikaty napływają w~odstępach milisekundowych, szczególnie w~okresach
+    zwiększonej zmienności rynkowej.
+    \item \textbf{Zmienność natężenia} --- przepływ danych nie~jest stały; w~momentach publikacji istotnych informacji
+    rynkowych wolumen komunikatów może wzrosnąć wielokrotnie.
+    \item \textbf{Krytyczność czasowa} --- wartość informacji maleje wraz z~upływem czasu; opóźnione dane tracą
+    użyteczność dla~algorytmów handlowych.
+\end{itemize}
+
+
+\section{Modele przetwarzania danych}
+\label{sec:modele_przetwarzania}
+
+W~literaturze i~praktyce inżynierskiej wyróżnia się dwa podstawowe podejścia do~przetwarzania danych: przetwarzanie
+wsadowe (\textit{batch processing}) oraz przetwarzanie strumieniowe (\textit{stream processing}).
+Każde z~nich charakteryzuje się odmiennymi właściwościami i~znajduje zastosowanie w~różnych scenariuszach.
+
+\subsection{Przetwarzanie wsadowe}
+\label{subsec:batch_processing}
+
+Przetwarzanie wsadowe polega na~gromadzeniu danych przez~określony czas, a~następnie ich jednorazowym przetworzeniu
+jako~skończonego zbioru.
+Model ten jest dobrze ugruntowany i~szeroko stosowany w~systemach analitycznych, gdzie~akceptowalne są~opóźnienia
+rzędu minut, godzin lub~dni.
+
+Typowy przepływ przetwarzania wsadowego obejmuje ekstrakcję danych ze~źródeł, ich~transformację zgodnie z~logiką
+biznesową oraz~załadowanie do~docelowego magazynu danych (\textit{ETL --- Extract, Transform, Load}).
+Procesy te~uruchamiane są~cyklicznie, według ustalonego harmonogramu.
+
+Zalety przetwarzania wsadowego to~prostota implementacji, łatwość debugowania oraz~możliwość ponownego przetworzenia
+całego zbioru w~przypadku wykrycia błędów.
+Wadą jest natomiast opóźnienie między~powstaniem danych a~ich dostępnością dla~odbiorców, co~w~kontekście rynków
+finansowych może być nieakceptowalne~\cite{bigdata_principles}.
+
+\subsection{Przetwarzanie strumieniowe}
+\label{subsec:stream_processing}
+
+Przetwarzanie strumieniowe zakłada przetwarzanie danych natychmiast po~ich nadejściu, bez~oczekiwania na~zgromadzenie
+pełnego zbioru.
+Każdy komunikat jest analizowany indywidualnie lub~w~kontekście niewielkiego okna czasowego, a~wyniki są~udostępniane
+z~minimalnym opóźnieniem.
+
+W~tym modelu dane przepływają przez~zdefiniowany potok przetwarzania (\textit{pipeline}), składający się z~operatorów
+realizujących transformacje, filtrowanie, agregację czy~wzbogacanie rekordów.
+Strumień wyjściowy może być kierowany do~kolejnych etapów przetwarzania, zapisywany w~bazie danych lub~wykorzystywany
+do~generowania alertów.
+
+Przetwarzanie strumieniowe jest szczególnie istotne w~kontekście danych finansowych, gdzie~opóźnienia rzędu
+milisekund mogą decydować o~rentowności strategii handlowych.
+Wymaga jednak bardziej złożonej infrastruktury oraz~starannego zarządzania stanem przetwarzania~\cite{8_requirements}.
+
+\subsection[Architektura Lambda i Kappa]{Architektura Lambda i~Kappa}
+\label{subsec:lambda_kappa}
+
+W~praktyce często stosuje się architektury hybrydowe, łączące zalety obu podejść.
+Architektura Lambda zakłada równoległe działanie dwóch ścieżek przetwarzania: warstwy wsadowej (\textit{batch layer})
+zapewniającej kompletność i~poprawność danych historycznych oraz~warstwy strumieniowej (\textit{speed layer})
+dostarczającej wyniki w~czasie rzeczywistym.
+Warstwa udostępniania (\textit{serving layer}) łączy wyniki z~obu ścieżek, udostępniając spójny widok danych~\cite{bigdata_principles}.
+
+Architektura Kappa stanowi uproszczenie tego modelu poprzez eliminację dedykowanej warstwy wsadowej.
+W~tym podejściu wszystkie dane są~przetwarzane jako~strumień, a~przetwarzanie historyczne realizowane jest poprzez
+ponowne odtworzenie strumienia z~trwałego magazynu zdarzeń.
+Model ten jest koncepcyjnie prostszy, lecz~wymaga odpowiedniej infrastruktury do~przechowywania i~odtwarzania
+historycznych strumieni~\cite{kappa_architecture}.
+
+
+\section{Semantyka dostarczania komunikatów}
+\label{sec:semantyka_dostarczania}
+
+Kluczowym aspektem systemów przetwarzania strumieniowego jest semantyka dostarczania komunikatów, określająca
+gwarancje dotyczące tego, ile~razy każdy komunikat zostanie przetworzony.
+Wyróżnia się trzy podstawowe poziomy gwarancji:
+
+\subsection[At-most-once (co najwyżej raz)]{At-most-once (co~najwyżej raz)}
+\label{subsec:at_most_once}
+
+W~semantyce \textit{at-most-once} komunikat może zostać utracony, lecz~nigdy nie~zostanie przetworzony więcej
+niż~jeden raz.
+Jest to~najprostsza do~implementacji gwarancja, gdyż~nie wymaga mechanizmów potwierdzeń ani~powtórzeń.
+Stosowana jest w~scenariuszach, gdzie~sporadyczna utrata danych jest~akceptowalna, na~przykład w~systemach
+monitoringu, gdzie~pojedyncze brakujące pomiary nie~wpływają istotnie na~ogólny obraz.
+
+W~kontekście danych finansowych semantyka ta~jest rzadko stosowana, ponieważ utrata nawet pojedynczej transakcji
+może prowadzić do~niespójności w~analizach lub~błędnych decyzji inwestycyjnych~\cite{at_least_once}.
+
+\subsection[At-least-once (co najmniej raz)]{At-least-once (co~najmniej raz)}
+\label{subsec:at_least_once}
+
+Semantyka \textit{at-least-once} gwarantuje, że~każdy komunikat zostanie przetworzony przynajmniej jeden raz,
+lecz~dopuszcza możliwość duplikatów.
+Realizowana jest poprzez mechanizm potwierdzeń (\textit{acknowledgements}) --- komunikat pozostaje w~kolejce do~czasu
+otrzymania potwierdzenia pomyślnego przetworzenia.
+W~przypadku awarii konsumenta lub~braku potwierdzenia, komunikat jest dostarczany ponownie.
+
+Model ten wymaga, aby~konsumenci byli idempotentni, czyli~wielokrotne przetworzenie tego samego komunikatu
+nie~powinno prowadzić do~niepożądanych efektów ubocznych.
+W~praktyce idempotentność osiąga się poprzez deduplikację na~podstawie unikalnych identyfikatorów komunikatów
+lub~projektowanie operacji w~sposób naturalnie idempotentny (np.~ustawianie wartości zamiast inkrementacji)~\cite{at_least_once}.
+
+\subsection{Exactly-once (dokładnie raz)}
+\label{subsec:exactly_once}
+
+Semantyka \textit{exactly-once} stanowi najsilniejszą gwarancję --- każdy komunikat jest przetwarzany dokładnie
+jeden raz, bez~utraty i~bez~duplikatów.
+Jest to~najbardziej pożądana, lecz~zarazem najtrudniejsza do~osiągnięcia semantyka.
+
+Realizacja wymaga koordynacji między~producentem, brokerem i~konsumentem, często z~wykorzystaniem mechanizmów
+transakcyjnych lub~rozproszonego zatwierdzania (\textit{distributed commit}).
+Ze~względu na~złożoność implementacji oraz~wpływ na~wydajność, w~wielu systemach stosuje się semantykę
+\textit{at-least-once} w~połączeniu z~idempotentnym przetwarzaniem jako~praktyczny kompromis~\cite{at_least_once}.
+
+
+\section[Okna czasowe w przetwarzaniu strumieniowym]{Okna czasowe w~przetwarzaniu strumieniowym}
+\label{sec:okna_czasowe}
+
+Wiele operacji analitycznych wymaga agregacji danych w~określonych przedziałach czasowych.
+W~przetwarzaniu strumieniowym wykorzystuje się koncepcję okien czasowych, które~grupują zdarzenia na~potrzeby obliczeń zbiorczych.
+
+\subsection{Okna stałe (fixed windows)}
+\label{subsec:fixed_windows}
+
+Okna stałe dzielą strumień na~rozłączne, następujące po~sobie przedziały o~jednakowej długości.
+Każde zdarzenie należy do~dokładnie jednego okna, a~wyniki agregacji są~emitowane po~zamknięciu każdego okna.
+
+Przykładem zastosowania jest obliczanie średniej ceny w~interwałach minutowych --- każda minuta stanowi osobne okno,
+a~po jej~zakończeniu publikowany jest wynik (np.~cena otwarcia, zamknięcia, maksimum, minimum).
+Takie agregaty stanowią podstawę wykresów świecowych (\textit{candlestick charts}) powszechnie stosowanych
+w~analizie technicznej~\cite{dataflow_model}.
+
+\subsection{Okna przesuwne (sliding windows)}
+\label{subsec:sliding_windows}
+
+Okna przesuwne obejmują zdarzenia z~określonego przedziału czasowego, lecz~w~odróżnieniu od~okien stałych,
+nakładają się na~siebie.
+Okno przesuwa się wraz z~nadejściem nowych zdarzeń, umożliwiając ciągłą aktualizację wyników agregacji.
+
+Typowym zastosowaniem jest obliczanie średniej kroczącej (\textit{moving average}), gdzie~wynik jest aktualizowany
+przy~każdym nowym zdarzeniu, uwzględniając ostatnie N~minut lub~ostatnie N~transakcji.
+Okna przesuwne zapewniają płynniejszy obraz zmian, lecz~wymagają większych zasobów obliczeniowych ze~względu
+na~nakładanie się przedziałów~\cite{dataflow_model}.
+
+\subsection{Okna sesyjne (session windows)}
+\label{subsec:session_windows}
+
+Okna sesyjne grupują zdarzenia na~podstawie aktywności, a~nie sztywnych granic czasowych.
+Sesja rozpoczyna się wraz z~pierwszym zdarzeniem i~trwa do~momentu, gdy~przez~zdefiniowany okres nie~napłyną żadne
+nowe zdarzenia (tzw.~\textit{gap}).
+Po~przekroczeniu tego progu sesja jest zamykana, a~kolejne zdarzenie rozpoczyna nową sesję.
+
+W~kontekście rynków finansowych okna sesyjne mogą być wykorzystywane do~identyfikacji okresów wzmożonej aktywności
+handlowej lub~grupowania serii szybkich transakcji wykonywanych przez~algorytmy wysokiej częstotliwości~\cite{dataflow_model}.
+
+
+\section[Problemy i wyzwania]{Problemy i~wyzwania}
+\label{sec:problemy_strumieniowe}
+
+Przetwarzanie danych strumieniowych wiąże się z~szeregiem wyzwań technicznych i~koncepcyjnych, które~wymagają
+starannego rozwiązania na~etapie projektowania systemu.
+
+\subsection{Zarządzanie czasem zdarzeń}
+\label{subsec:czas_zdarzen}
+
+W~systemach rozproszonych rozróżnia się czas zdarzenia (\textit{event time}), czyli~moment faktycznego wystąpienia
+zdarzenia u~źródła, oraz~czas przetwarzania (\textit{processing time}), czyli~moment dotarcia zdarzenia do~systemu.
+Różnica między~tymi znacznikami wynika z~opóźnień sieciowych, kolejkowania oraz~ewentualnych awarii.
+
+Zdarzenia mogą docierać w~kolejności innej niż~chronologiczna (tzw.~\textit{out-of-order events}), co~komplikuje
+obliczenia oparte na~czasie.
+System musi decydować, jak~długo czekać na~potencjalnie opóźnione zdarzenia przed zamknięciem okna czasowego
+i~emisją wyników.
+Zbyt~krótkie oczekiwanie prowadzi do~pominięcia opóźnionych danych, zbyt~długie --- do~zwiększenia opóźnienia wyników.
+
+Mechanizm \textit{watermarks} pozwala śledzić postęp czasu zdarzeń i~sygnalizować, że~wszystkie zdarzenia
+o~znaczniku czasowym mniejszym od~pewnej wartości zostały już~odebrane.
+Zdarzenia przychodzące po~przekroczeniu znacznika czasu są~traktowane jako~spóźnione i~mogą być odrzucane
+lub~przetwarzane w~specjalny sposób~\cite{dataflow_model}.
+
+\subsection{Zarządzanie stanem}
+\label{subsec:zarzadzanie_stanem}
+
+Wiele operacji strumieniowych wymaga utrzymywania stanu między~kolejnymi komunikatami --- na~przykład obliczenie
+średniej kroczącej wymaga pamiętania poprzednich wartości, a~agregacja w~oknie czasowym --- gromadzenia zdarzeń
+do~momentu zamknięcia okna.
+
+Zarządzanie stanem w~systemach rozproszonych jest wyzwaniem ze~względu na~konieczność zapewnienia trwałości
+(stan nie~może zostać utracony w~przypadku awarii), spójności (wszystkie repliki muszą widzieć ten~sam stan)
+oraz~wydajności (dostęp do~stanu nie~może stanowić wąskiego gardła).
+
+Stosowane podejścia obejmują lokalne magazyny stanu z~mechanizmem punktów kontrolnych (\textit{checkpointing}),
+zewnętrzne bazy danych o~niskich opóźnieniach oraz~rozproszone struktury danych z~replikacją~\cite{flink}.
+
+\subsection[Backpressure i kontrola przepływu]{Backpressure i~kontrola przepływu}
+\label{subsec:backpressure}
+
+Sytuacja, w~której producent generuje dane szybciej niż~konsument jest w~stanie je~przetworzyć, nazywana jest
+przeciążeniem (\textit{backpressure}).
+Bez~odpowiednich mechanizmów kontroli przepływu system może ulec destabilizacji --- kolejki rosną nieograniczenie,
+pamięć się wyczerpuje, a~opóźnienia stale się~zwiększają.
+
+Strategie radzenia sobie z~backpressure obejmują buforowanie z~ograniczeniem rozmiaru (nadmiarowe komunikaty
+są~odrzucane), adaptacyjne spowalnianie producenta (poprzez sygnalizację zwrotną), oraz~skalowanie horyzontalne
+konsumentów (dodawanie kolejnych instancji przetwarzających)~\cite{google_sre_book}.
+
+W~kontekście danych z~rynków kryptowalutowych backpressure może wystąpić w~okresach ekstremalnej zmienności,
+gdy~wolumen transakcji wielokrotnie przekracza typowe wartości.
+System musi być~zaprojektowany tak, aby~degradował wydajność (zwiększając opóźnienie) zamiast tracić dane lub~ulegać
+całkowitej awarii.
+
+\subsection[Skalowalność i partycjonowanie]{Skalowalność i~partycjonowanie}
+\label{subsec:skalowalnosc}
+
+Skalowanie systemów strumieniowych wymaga możliwości podziału strumienia na~niezależne partycje, które~mogą być
+przetwarzane równolegle.
+Kluczem partycjonowania jest zazwyczaj atrybut danych zapewniający równomierny rozkład obciążenia oraz~zachowanie
+lokalności danych powiązanych logicznie~\cite{scaling}.
+
+W~przypadku danych z~giełd kryptowalut naturalnym kluczem partycjonowania jest symbol pary handlowej --- wszystkie
+zdarzenia dotyczące danej pary (np.~BTCUSDT) trafiają do~tej~samej partycji, co~umożliwia lokalne obliczanie
+agregatów bez~koordynacji między~partycjami.
+
+Wyzwaniem jest zapewnienie równomiernego rozkładu obciążenia, gdy~popularność poszczególnych par jest zróżnicowana.
+Para BTC/USDT generuje znacznie więcej transakcji niż~mniej popularne pary, co~może prowadzić do~nierównomiernego
+obciążenia partycji (\textit{hot spots})~\cite{coingecko}.
+
+
+\section{Architektura sterowana zdarzeniami}
+\label{sec:event_driven}
+
+Architektura sterowana zdarzeniami (\textit{Event-Driven Architecture}, EDA) stanowi paradygmat projektowania
+systemów, w~którym przepływ sterowania jest determinowany przez~zdarzenia --- sygnały o~wystąpieniu określonych
+stanów lub~akcji w~systemie.
+
+W~modelu tym komponenty systemu komunikują się poprzez publikowanie i~subskrybowanie zdarzeń, bez~bezpośrednich
+wywołań synchronicznych.
+Producent zdarzenia nie~musi znać odbiorców, a~konsumenci mogą dołączać lub~odłączać się dynamicznie,
+co~zapewnia luźne powiązanie (\textit{loose coupling}) między~modułami~\cite{edd_pub_sub}.
+
+Centralna rola w~architekturze EDA przypada brokerowi wiadomości, który~odpowiada za~przyjmowanie zdarzeń
+od~producentów, ich~trwałe przechowywanie oraz~dostarczanie do~zainteresowanych konsumentów.
+Broker zapewnia buforowanie w~przypadku chwilowej niedostępności odbiorców oraz~może realizować dodatkowe
+funkcje, takie jak~filtrowanie, routing czy~transformacja komunikatów~\cite{data_broker}.
+
+Zalety architektury sterowanej zdarzeniami obejmują naturalną asynchroniczność (operacje nie~blokują się wzajemnie),
+łatwość dodawania nowych konsumentów (bez~modyfikacji istniejących komponentów), oraz~odporność na~awarie
+(zdarzenia są~buforowane do~czasu pomyślnego przetworzenia).
+Głównymi wadami są~większa złożoność debugowania (brak liniowego przepływu sterowania) oraz~konieczność zarządzania
+ostateczną spójnością (\textit{eventual consistency})~\cite{fundamentals}.
+
+
+\section{Podsumowanie}
+\label{sec:podsumowanie_przetwarzanie}
+
+Przetwarzanie danych strumieniowych z~rynków finansowych wymaga starannego doboru modeli, semantyk i~mechanizmów
+odpowiadających specyfice tego~obszaru.
+Kluczowe znaczenie ma~minimalizacja opóźnień, zapewnienie niezawodności dostarczania oraz~elastyczna obsługa
+zmiennego obciążenia.
+
+Architektura sterowana zdarzeniami w~połączeniu z~semantyką dostarczania \textit{at-least-once} i~idempotentnym
+przetwarzaniem stanowi praktyczny kompromis między~złożonością implementacji a~wymaganymi gwarancjami.
+Mechanizmy okien czasowych umożliwiają realizację analiz agregacyjnych, natomiast odpowiednie strategie
+partycjonowania i~kontroli przepływu zapewniają skalowalność systemu.
+
+W~kolejnych rozdziałach przedstawiono, w~jaki sposób opisane koncepcje zostały zastosowane w~projektowanym systemie
+do~przetwarzania danych z~giełdy kryptowalut Binance.
+
